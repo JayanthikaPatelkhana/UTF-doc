@@ -27,6 +27,9 @@ sendKeys("id=employee","${KEY_ENTER}");
 
 
 ## UTF commands
+
+
+
 * **open**
 
 
@@ -206,7 +209,12 @@ echo("message to print");
 
 
 
-#Control Flow
+# Control Flow
+
+
+
+
+
 * **if**
 
 The "if" command is the conditional block and terminates with "end". It evaluates the Javascript expression.
