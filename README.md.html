@@ -11,19 +11,19 @@
 <blockquote>
 <p class="has-line-data" data-line-start="9" data-line-end="10">Example</p>
 </blockquote>
-<pre><code class="has-line-data" data-line-start="11" data-line-end="25" class="language-bh">open(&quot;https://opensource-demo.orangehrmlive.com/&quot;);  // opens the URL
-click(&quot;css=#divUsername &gt; .form-hint&quot;);   //clicks on the web element by locating it using the css variable
-type(&quot;id=txtUsername&quot;, &quot;value=Admin&quot;);   // types the value &quot;Admin&quot; in the specified text field(located by its id)
-type(&quot;id=txtPassword&quot;, &quot;value=admin123&quot;); // types the value&quot;admin123&quot;  in the specified text field(located by its id)
-click(&quot;id=btnLogin&quot;); // clicks on the login button using the target locator.
-assertTitle(&quot;OrangeHRM&quot;); // asserts the title of the page
-storeText(&quot;css=h1&quot;,&quot;Dashboard&quot;); // stores the text of an element/page in the variable
-echo(&quot;$(Dashboard)&quot;); // prints the message or content stored in the variable
-click(&quot;css=#menu_time_viewTimeModule &gt; b&quot;); //clicks on the web element
-click(&quot;id=menu_time_Timesheets&quot;); //clicks on the web element
-click(&quot;id=employee&quot;);  //clicks on the text field
-type(&quot;id=employee&quot;,&quot;Jay&quot;); // types the text in the text field
-sendKeys(&quot;id=employee&quot;,&quot;${KEY_ENTER}&quot;); // send keys does the action of &quot;enter&quot; button.
+<pre><code class="has-line-data" data-line-start="11" data-line-end="25" class="language-sh">open(<span class="hljs-string">"https://opensource-demo.orangehrmlive.com/"</span>);    // opens the URL
+click(<span class="hljs-string">"css=#divUsername &gt; .form-hint"</span>);               //clicks on the web element by locating it using the css variable
+<span class="hljs-built_in">type</span>(<span class="hljs-string">"id=txtUsername"</span>, <span class="hljs-string">"value=Admin"</span>);               //types the value <span class="hljs-string">"Admin"</span> <span class="hljs-keyword">in</span> the specified text field(located by its id)
+<span class="hljs-built_in">type</span>(<span class="hljs-string">"id=txtPassword"</span>, <span class="hljs-string">"value=admin123"</span>);           // types the value<span class="hljs-string">"admin123"</span>  <span class="hljs-keyword">in</span> the specified text field(located by its id)
+click(<span class="hljs-string">"id=btnLogin"</span>);                              // clicks on the login button using the target locator.
+assertTitle(<span class="hljs-string">"OrangeHRM"</span>);                         // asserts the title of the page
+storeText(<span class="hljs-string">"css=h1"</span>,<span class="hljs-string">"Dashboard"</span>);                 // stores the text of an element/page <span class="hljs-keyword">in</span> the variable
+<span class="hljs-built_in">echo</span>(<span class="hljs-string">"<span class="hljs-variable">$(Dashboard)</span>"</span>);                           // prints the message or content stored <span class="hljs-keyword">in</span> the variable
+click(<span class="hljs-string">"css=#menu_time_viewTimeModule &gt; b"</span>);    //clicks on the web element
+click(<span class="hljs-string">"id=menu_time_Timesheets"</span>);             //clicks on the web element
+click(<span class="hljs-string">"id=employee"</span>);                        //clicks on the text field
+<span class="hljs-built_in">type</span>(<span class="hljs-string">"id=employee"</span>,<span class="hljs-string">"Jay"</span>);                  // types the text <span class="hljs-keyword">in</span> the text field
+sendKeys(<span class="hljs-string">"id=employee"</span>,<span class="hljs-string">"<span class="hljs-variable">${KEY_ENTER}</span>"</span>);    // send keys does the action of <span class="hljs-string">"enter"</span> button.
 </code></pre>
 <h2 class="code-line" data-line-start=28 data-line-end=29><a id="UTF_commands_28"></a>UTF commands</h2>
 <ul>
