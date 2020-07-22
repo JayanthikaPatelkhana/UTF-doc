@@ -51,38 +51,38 @@ setWindowSize("width X height");
 The target locator will be id, css, textLink, Xpath of an element.
 >Syntax
 ```sh
-click("target locator");
+click("elementSelector");
 ```
 * **clickAt**
 "clickAt" will click on the element in a specified location.
 >Syntax
 ```sh
-clickAt("target locator", "coords");
+clickAt("elementSelector", "coords");
 ```
 * **doubleClick**
 It will "doubleClick" on the element.
 >Syntax
 ```sh
-doubleClick("target locator");
+doubleClick("elementSelector");
 ```
 * **doubleClickAt**
 "doubleClickAt" will double click on an element at specified coordinated location of the element.
 >Syntax
 ```sh
-doubleClickAt("target location", "coords");
+doubleClickAt("elementSelector", "coords");
 ```
 * **type** 
 "type" command is one of the commands, mainly used to type text into the text box and text area fields.
 >Syntax
 ```sh
-type("target locator", "value to input");
+type("elementSelector", "value to input");
 ```
 * **sendKeys** 
 The sendKeys command simulates keystroke events on the specified element, as though you typed the value key-by-key.Sendkeys can send the ${KEY_ENTER} key event. This means it will kind of work same as user pressing ENTER using the keyboard.
 
 >Syntax
 ```sh
-sendKeys("target locator", ${KEY_ENTER});
+sendKeys("elementSelector", ${KEY_ENTER});
 ```
  
 
@@ -91,49 +91,49 @@ The "mouseOut" command is used for moving the mouse pointer away from the specif
 
 >Syntax
 ```sh
-mouseOut("target locator");
+mouseOut("elementSelector");
 ```
 
 * **mouseDown**
 "mouseDown" simulates the event to press the mouse button.
 >Syntax
 ```sh
-mouseDown("target locator");
+mouseDown("elementSelector");
 ```
 
 * **mouseDownAt**
 "mouseDown" simulates the event to press the  mouse button at specified location.
 >Syntax
 ```sh
-mouseDownAt("target locator", "coords"),
+mouseDownAt("elementSelector", "coords");
 ```
 
 * **mouseMoveAt**
 The "mouseMoveAt" will simulate a user to press the mouse button at specified location.
 >Syntax
 ```sh
-mouseMoveAt("target locator", "coords");
+mouseMoveAt("elementSelector", "coords");
 ```
 
 * **mouseOver**
 The "mouseOver" simulates a user to hover on the specified element.
 >Syntax
 ```sh
-mouseOver("target locator");
+mouseOver("elementSelector");
 ```
 
 * **mouseUp**
 "mouseUp" simulates the event of releasing the mouse button, stops holding the button down.
 >Syntax
 ```sh
-mouseUp("target locator");
+mouseUp("elementSelector");
 ```
 * **storeText** 
 The "storeText" command is used to store the text value of an element in a variable of the web page for the later use.
 
 >Syntax
 ```sh	
-storeText("target locator","value");
+storeText("elementSelector","value");
 ```
 
 
@@ -142,7 +142,7 @@ The "store" command is used to store some data for later use.
 
 >Syntax
 ```sh	
-store("text", "variable name");
+store("elementSelector", "variable name");
 ```
 
 
@@ -151,7 +151,7 @@ The "storevalue" command is used to get the value of an element and is stored in
 
 >Syntax
 ```sh
-storeValue("target locator", "variable name");
+storeValue("elementSelector", "variable name");
 ```
  
 
@@ -160,14 +160,14 @@ The "storeTitle" command gets the title of the current page.
 
 >Syntax
 ```sh
-storeTitle("target locator", "variable name");
+storeTitle("elementSelector", "variable name");
 ```
 
 * **storeAttribute**
 "storeAttribute" will get the value of an element attribute. The attribute value may differ depending on the browser.
 >Syntax
 ```sh
-storeAttribute("target value", "variable name");
+storeAttribute("elementSelector", "variable name");
 ```
 
 * **check**
@@ -176,7 +176,7 @@ The "check" command , checks on the checkbox or a radio button. It does the simi
 
 >Syntax
 ```sh
-check("target locator");
+check("elementSelector");
 ```
 
 * **uncheck**
@@ -184,7 +184,7 @@ The "uncheck" command , unchecks on the checkbox or a radio button. It does the 
 
 >Syntax
 ```sh
-uncheck("target locator");
+uncheck("elementSelector");
 ```
 
 * **assertChecked**
@@ -193,7 +193,7 @@ The "assertChecked" command is used to confirm, that the element is checked or n
 
 >Syntax
 ```sh
-assertChecked("target locator");
+assertChecked("elementSelector");
 ```
 
 * **assertNotChecked**
@@ -202,7 +202,7 @@ The "assertNotChecked" command is used to confirm, that the element is not check
 
 >Syntax
 ```sh
-assertNotChecked("target locator");
+assertNotChecked("elementSelector");
 ```
 * **assertTitle**
 The "assertTitle" command is used to confirm, that the title of the current page equals the text provided. The test case execution stops if the assert fails.
@@ -217,28 +217,28 @@ The "assertValue" command will confirm the value of an input field. For checkbox
 
 >Syntax
 ```sh
-assertValue("target locator", "text/value");
+assertValue("elementSelector", "text/value");
 ```
 
 * **assertEditable**
 The "assertEditable" is used to check whether the element is editable. The test execution stops if the assert fails.
 >Syntax
 ```sh
-assertEditable("target locator");
+assertEditable("elementSelector");
 ```
 
 * **assertNotEditable**
 The "assertNotEditable" will check whether the element is not editable. The test execution will stop if the assert fails.
 >Syntax
 ```sh
-assertNotEditable("target locator");
+assertNotEditable("elementSelector");
 ```
 
 * **assertNotText**
 The "assertNotText" will check, if the text of an element does not contain the provided text.
 >Syntax
 ```sh
-assertNotText("target locator", "value/text");
+assertNotText("elementSelector", "value/text");
 ```
 
 
@@ -247,7 +247,7 @@ The "runScript" command is used to execute a Javascript code. It creates a new s
 
 >Syntax
 ```sh	
-runScript|("target locator");
+runScript|("elementSelector");
 ```
 
 * **echo**
@@ -298,6 +298,36 @@ statement;
 }
 ```
 
+
+
+
+
+
+
+
+
+
+# Element Selector
+
+Element selector is a command used to locate/identify web element in a web page and operate the web element using the UTF commands. To precisely locate/identify a Web element and create an automation script different element selectors are used.
+
+
+ * "id" is an element selector, which locates/identifies a web element by its "id" and returns value of an element or perform action on an element.
+ >format : "id = id of an element"
+
+ * "name" is an element selector, which locates/identifies a web element by its name and returns value of an element or perform action on an element.
+ >format : "name = name of an element"
+
+ * "linkText" is an element selector, which locates/identifies a text or link in the web page.
+ >format : "linkText = Text_of_Link"
+
+ * "css" is an element selector, which loactes/identifies a web element by its CSS class in the web page.
+ >format : "css = tag.(id/class/name)"
+
+
+ * "Xpath" is an element selector, which locates/identifies a web element by the Xpath in a web page and returns value of an element or perform action on an element.
+ >format : "Xpath = //tagname[@attribute='value']"
+ 
 
 
 
