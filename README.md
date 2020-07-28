@@ -8,7 +8,7 @@ It is a testing framework, where, we run our scripts for automation testing. It 
 
 Let's understand the working of the tool and the commands by the example script.
 >Example
-```sh
+```json
 open("https://opensource-demo.orangehrmlive.com/");    // opens the URL
 click("css=#divUsername > .form-hint");               //clicks on the web element by locating it using the css variable
 type("id=txtUsername", "value=Admin");               //types the value "Admin" in the specified text field(located by its id)
@@ -241,13 +241,58 @@ The "assertNotText" will check, if the text of an element does not contain the p
 assertNotText("elementSelector", "value/text");
 ```
 
+* **verifyTitle**
+It will verify whether the title of the current page matches with the provided text. The test execution will continue even if the verify fails.
+>Syntax
+```sh
+verifyTitle("text");
+```
+* **verifyElementPresent**
+It will verify, if the element is present in the page. The test excution continues even if the verify fails.
+>Syntax
+```sh
+verifyElementPresent("elementSelector");
+```
+* **verifyElementNotPresent**
+It will verify, if the element is not present in the page. The test execution continues even the verify fails.
+>Syntax
+```sh
+verifyElementNotPresent("elementSelector");
+```
+* **waitForElementPresent**
+It will wait some time for the target element to be present in the page.
+>Syntax
+```sh
+waitForElementPresent("elementSelector", "wait time in ms");
+```
+
+* **waitForElementNotPresent**
+It will wait some time for the target element not to be present in the page.
+>Syntax
+```sh
+waitForElementNotPresent("elementSelector", "wait time in ms");
+```
+
+* **waitForElementVisible**
+It will wait some time for the target element to be visible in the page.
+>Syntax
+```sh
+waitForElementVisible("elementSelector", "wait time in ms");
+```
+
+* **waitForElementNotVisible**
+It will wait some time for the target element not to be visible in the page.
+>Syntax
+```sh
+waitForElementNotVisible("elementSelector","wait time in ms");
+```
 
 * **runScript**
 The "runScript" command is used to execute a Javascript code. It creates a new script tag in the current test window and adds the specified text into the body of the command.
 
 >Syntax
 ```sh	
-runScript|("elementSelector");
+runScript("elementSelector");
 ```
 
 * **echo**
@@ -258,6 +303,13 @@ The "echo" command prints the message specified. It is used for debugging , whet
 echo("message to print");
 ```
 
+* **pause**
+It will hold/wait the test execution for specified time.
+
+>Syntax
+```sh
+pause("Wait time in milliseconds");
+```
 
 
 

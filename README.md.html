@@ -11,19 +11,19 @@
 <blockquote>
 <p class="has-line-data" data-line-start="9" data-line-end="10">Example</p>
 </blockquote>
-<pre><code class="has-line-data" data-line-start="11" data-line-end="25" class="language-sh">open(<span class="hljs-string">"https://opensource-demo.orangehrmlive.com/"</span>);    // opens the URL
-click(<span class="hljs-string">"css=#divUsername &gt; .form-hint"</span>);               //clicks on the web element by locating it using the css variable
-<span class="hljs-built_in">type</span>(<span class="hljs-string">"id=txtUsername"</span>, <span class="hljs-string">"value=Admin"</span>);               //types the value <span class="hljs-string">"Admin"</span> <span class="hljs-keyword">in</span> the specified text field(located by its id)
-<span class="hljs-built_in">type</span>(<span class="hljs-string">"id=txtPassword"</span>, <span class="hljs-string">"value=admin123"</span>);           // types the value<span class="hljs-string">"admin123"</span>  <span class="hljs-keyword">in</span> the specified text field(located by its id)
-click(<span class="hljs-string">"id=btnLogin"</span>);                              // clicks on the login button using the target locator.
-assertTitle(<span class="hljs-string">"OrangeHRM"</span>);                         // asserts the title of the page
-storeText(<span class="hljs-string">"css=h1"</span>,<span class="hljs-string">"Dashboard"</span>);                 // stores the text of an element/page <span class="hljs-keyword">in</span> the variable
-<span class="hljs-built_in">echo</span>(<span class="hljs-string">"<span class="hljs-variable">$(Dashboard)</span>"</span>);                           // prints the message or content stored <span class="hljs-keyword">in</span> the variable
-click(<span class="hljs-string">"css=#menu_time_viewTimeModule &gt; b"</span>);    //clicks on the web element
-click(<span class="hljs-string">"id=menu_time_Timesheets"</span>);             //clicks on the web element
-click(<span class="hljs-string">"id=employee"</span>);                        //clicks on the text field
-<span class="hljs-built_in">type</span>(<span class="hljs-string">"id=employee"</span>,<span class="hljs-string">"Jay"</span>);                  // types the text <span class="hljs-keyword">in</span> the text field
-sendKeys(<span class="hljs-string">"id=employee"</span>,<span class="hljs-string">"<span class="hljs-variable">${KEY_ENTER}</span>"</span>);    // send keys does the action of <span class="hljs-string">"enter"</span> button.
+<pre><code class="has-line-data" data-line-start="11" data-line-end="25" class="language-json">open("https://opensource-demo.orangehrmlive.com/");    // opens the URL
+click("css=#divUsername &gt; .form-hint");               //clicks on the web element by locating it using the css variable
+type("id=txtUsername", "value=Admin");               //types the value "Admin" in the specified text field(located by its id)
+type("id=txtPassword", "value=admin123");           // types the value"admin123"  in the specified text field(located by its id)
+click("id=btnLogin");                              // clicks on the login button using the target locator.
+assertTitle("OrangeHRM");                         // asserts the title of the page
+storeText("css=h1","Dashboard");                 // stores the text of an element/page in the variable
+echo("$(Dashboard)");                           // prints the message or content stored in the variable
+click("css=#menu_time_viewTimeModule &gt; b");    //clicks on the web element
+click("id=menu_time_Timesheets");             //clicks on the web element
+click("id=employee");                        //clicks on the text field
+type("id=employee","Jay");                  // types the text in the text field
+sendKeys("id=employee","${KEY_ENTER}");    // send keys does the action of "enter" button.
 </code></pre>
 <h2 class="code-line" data-line-start=28 data-line-end=29><a id="UTF_commands_28"></a>UTF commands</h2>
 <ul>
@@ -280,66 +280,138 @@ The “assertNotText” will check, if the text of an element does not contain t
 <pre><code class="has-line-data" data-line-start="240" data-line-end="242" class="language-sh">assertNotText(<span class="hljs-string">"elementSelector"</span>, <span class="hljs-string">"value/text"</span>);
 </code></pre>
 <ul>
-<li class="has-line-data" data-line-start="244" data-line-end="247"><strong>runScript</strong><br>
+<li class="has-line-data" data-line-start="243" data-line-end="245"><strong>verifyTitle</strong><br>
+It will verify whether the title of the current page matches with the provided text. The test execution will continue even if the verify fails.</li>
+</ul>
+<blockquote>
+<p class="has-line-data" data-line-start="245" data-line-end="246">Syntax</p>
+</blockquote>
+<pre><code class="has-line-data" data-line-start="247" data-line-end="249" class="language-sh">verifyTitle(<span class="hljs-string">"text"</span>);
+</code></pre>
+<ul>
+<li class="has-line-data" data-line-start="249" data-line-end="251"><strong>verifyElementPresent</strong><br>
+It will verify, if the element is present in the page. The test excution continues even if the verify fails.</li>
+</ul>
+<blockquote>
+<p class="has-line-data" data-line-start="251" data-line-end="252">Syntax</p>
+</blockquote>
+<pre><code class="has-line-data" data-line-start="253" data-line-end="255" class="language-sh">verifyElementPresent(<span class="hljs-string">"elementSelector"</span>);
+</code></pre>
+<ul>
+<li class="has-line-data" data-line-start="255" data-line-end="257"><strong>verifyElementNotPresent</strong><br>
+It will verify, if the element is not present in the page. The test execution continues even the verify fails.</li>
+</ul>
+<blockquote>
+<p class="has-line-data" data-line-start="257" data-line-end="258">Syntax</p>
+</blockquote>
+<pre><code class="has-line-data" data-line-start="259" data-line-end="261" class="language-sh">verifyElementNotPresent(<span class="hljs-string">"elementSelector"</span>);
+</code></pre>
+<ul>
+<li class="has-line-data" data-line-start="261" data-line-end="263"><strong>waitForElementPresent</strong><br>
+It will wait some time for the target element to be present in the page.</li>
+</ul>
+<blockquote>
+<p class="has-line-data" data-line-start="263" data-line-end="264">Syntax</p>
+</blockquote>
+<pre><code class="has-line-data" data-line-start="265" data-line-end="267" class="language-sh"><span class="hljs-built_in">wait</span>ForElementPresent(<span class="hljs-string">"elementSelector"</span>, <span class="hljs-string">"wait time in ms"</span>);
+</code></pre>
+<ul>
+<li class="has-line-data" data-line-start="268" data-line-end="270"><strong>waitForElementNotPresent</strong><br>
+It will wait some time for the target element not to be present in the page.</li>
+</ul>
+<blockquote>
+<p class="has-line-data" data-line-start="270" data-line-end="271">Syntax</p>
+</blockquote>
+<pre><code class="has-line-data" data-line-start="272" data-line-end="274" class="language-sh"><span class="hljs-built_in">wait</span>ForElementNotPresent(<span class="hljs-string">"elementSelector"</span>, <span class="hljs-string">"wait time in ms"</span>);
+</code></pre>
+<ul>
+<li class="has-line-data" data-line-start="275" data-line-end="277"><strong>waitForElementVisible</strong><br>
+It will wait some time for the target element to be visible in the page.</li>
+</ul>
+<blockquote>
+<p class="has-line-data" data-line-start="277" data-line-end="278">Syntax</p>
+</blockquote>
+<pre><code class="has-line-data" data-line-start="279" data-line-end="281" class="language-sh"><span class="hljs-built_in">wait</span>ForElementVisible(<span class="hljs-string">"elementSelector"</span>, <span class="hljs-string">"wait time in ms"</span>);
+</code></pre>
+<ul>
+<li class="has-line-data" data-line-start="282" data-line-end="284"><strong>waitForElementNotVisible</strong><br>
+It will wait some time for the target element not to be visible in the page.</li>
+</ul>
+<blockquote>
+<p class="has-line-data" data-line-start="284" data-line-end="285">Syntax</p>
+</blockquote>
+<pre><code class="has-line-data" data-line-start="286" data-line-end="288" class="language-sh"><span class="hljs-built_in">wait</span>ForElementNotVisible(<span class="hljs-string">"elementSelector"</span>,<span class="hljs-string">"wait time in ms"</span>);
+</code></pre>
+<ul>
+<li class="has-line-data" data-line-start="289" data-line-end="292"><strong>runScript</strong><br>
 The “runScript” command is used to execute a Javascript code. It creates a new script tag in the current test window and adds the specified text into the body of the command.</li>
 </ul>
 <blockquote>
-<p class="has-line-data" data-line-start="247" data-line-end="248">Syntax</p>
+<p class="has-line-data" data-line-start="292" data-line-end="293">Syntax</p>
 </blockquote>
-<pre><code class="has-line-data" data-line-start="249" data-line-end="251" class="language-sh">runScript|(<span class="hljs-string">"elementSelector"</span>);
+<pre><code class="has-line-data" data-line-start="294" data-line-end="296" class="language-sh">runScript(<span class="hljs-string">"elementSelector"</span>);
 </code></pre>
 <ul>
-<li class="has-line-data" data-line-start="252" data-line-end="255"><strong>echo</strong><br>
+<li class="has-line-data" data-line-start="297" data-line-end="300"><strong>echo</strong><br>
 The “echo” command prints the message specified. It is used for debugging , whether a specific command/value is executed.</li>
 </ul>
 <blockquote>
-<p class="has-line-data" data-line-start="255" data-line-end="256">Syntax</p>
+<p class="has-line-data" data-line-start="300" data-line-end="301">Syntax</p>
 </blockquote>
-<pre><code class="has-line-data" data-line-start="257" data-line-end="259" class="language-sh"><span class="hljs-built_in">echo</span>(<span class="hljs-string">"message to print"</span>);
+<pre><code class="has-line-data" data-line-start="302" data-line-end="304" class="language-sh"><span class="hljs-built_in">echo</span>(<span class="hljs-string">"message to print"</span>);
 </code></pre>
-<h1 class="code-line" data-line-start=283 data-line-end=284><a id="Control_Flow_283"></a>Control Flow</h1>
 <ul>
-<li class="has-line-data" data-line-start="289" data-line-end="291"><strong>if</strong></li>
+<li class="has-line-data" data-line-start="305" data-line-end="308"><strong>pause</strong><br>
+It will hold/wait the test execution for specified time.</li>
 </ul>
-<p class="has-line-data" data-line-start="291" data-line-end="292">The “if” command is the conditional block and terminates with “end”. It evaluates the Javascript expression.</p>
 <blockquote>
-<p class="has-line-data" data-line-start="292" data-line-end="293">Syntax</p>
+<p class="has-line-data" data-line-start="308" data-line-end="309">Syntax</p>
 </blockquote>
-<pre><code class="has-line-data" data-line-start="294" data-line-end="299" class="language-sh"><span class="hljs-keyword">if</span>(condition)
+<pre><code class="has-line-data" data-line-start="310" data-line-end="312" class="language-sh">pause(<span class="hljs-string">"Wait time in milliseconds"</span>);
+</code></pre>
+<h1 class="code-line" data-line-start=335 data-line-end=336><a id="Control_Flow_335"></a>Control Flow</h1>
+<ul>
+<li class="has-line-data" data-line-start="341" data-line-end="343"><strong>if</strong></li>
+</ul>
+<p class="has-line-data" data-line-start="343" data-line-end="344">The “if” command is the conditional block and terminates with “end”. It evaluates the Javascript expression.</p>
+<blockquote>
+<p class="has-line-data" data-line-start="344" data-line-end="345">Syntax</p>
+</blockquote>
+<pre><code class="has-line-data" data-line-start="346" data-line-end="351" class="language-sh"><span class="hljs-keyword">if</span>(condition)
 {
 statement;
 }
 </code></pre>
-<h1 class="code-line" data-line-start=309 data-line-end=310><a id="Element_Selector_309"></a>Element Selector</h1>
-<p class="has-line-data" data-line-start="311" data-line-end="312">Element selector is a command used to locate/identify web element in a web page and operate the web element using the UTF commands. To precisely locate/identify a Web element and create an automation script different element selectors are used.</p>
+<h1 class="code-line" data-line-start=361 data-line-end=362><a id="Element_Selector_361"></a>Element Selector</h1>
+<p class="has-line-data" data-line-start="363" data-line-end="364">Element selector is a command used to locate/identify web element in a web page and operate the web element using the UTF commands. To precisely locate/identify a Web element and create an automation script different element selectors are used.</p>
 <ul>
-<li class="has-line-data" data-line-start="314" data-line-end="315">“id” is an element selector, which locates/identifies a web element by its “id” and returns value of an element or perform action on an element.</li>
+<li class="has-line-data" data-line-start="366" data-line-end="367">“id” is an element selector, which locates/identifies a web element by its “id” and returns value of an element or perform action on an element.</li>
 </ul>
 <blockquote>
-<p class="has-line-data" data-line-start="315" data-line-end="316">format : “id = id of an element”</p>
+<p class="has-line-data" data-line-start="367" data-line-end="368">format : “id = id of an element”</p>
 </blockquote>
 <ul>
-<li class="has-line-data" data-line-start="317" data-line-end="318">“name” is an element selector, which locates/identifies a web element by its name and returns value of an element or perform action on an element.</li>
+<li class="has-line-data" data-line-start="369" data-line-end="370">“name” is an element selector, which locates/identifies a web element by its name and returns value of an element or perform action on an element.</li>
 </ul>
 <blockquote>
-<p class="has-line-data" data-line-start="318" data-line-end="319">format : “name = name of an element”</p>
+<p class="has-line-data" data-line-start="370" data-line-end="371">format : “name = name of an element”</p>
 </blockquote>
 <ul>
-<li class="has-line-data" data-line-start="320" data-line-end="321">“linkText” is an element selector, which locates/identifies a text or link in the web page.</li>
+<li class="has-line-data" data-line-start="372" data-line-end="373">“linkText” is an element selector, which locates/identifies a text or link in the web page.</li>
 </ul>
 <blockquote>
-<p class="has-line-data" data-line-start="321" data-line-end="322">format : “linkText = Text_of_Link”</p>
+<p class="has-line-data" data-line-start="373" data-line-end="374">format : “linkText = Text_of_Link”</p>
 </blockquote>
 <ul>
-<li class="has-line-data" data-line-start="323" data-line-end="324">“css” is an element selector, which loactes/identifies a web element by its CSS class in the web page.</li>
+<li class="has-line-data" data-line-start="375" data-line-end="376">“css” is an element selector, which loactes/identifies a web element by its CSS class in the web page.</li>
 </ul>
 <blockquote>
-<p class="has-line-data" data-line-start="324" data-line-end="325">format : “css = tag.(id/class/name)”</p>
+<p class="has-line-data" data-line-start="376" data-line-end="377">format : “css = tag.(id/class/name)”</p>
 </blockquote>
 <ul>
-<li class="has-line-data" data-line-start="327" data-line-end="328">“Xpath” is an element selector, which locates/identifies a web element by the Xpath in a web page and returns value of an element or perform action on an element.</li>
+<li class="has-line-data" data-line-start="379" data-line-end="380">“Xpath” is an element selector, which locates/identifies a web element by the Xpath in a web page and returns value of an element or perform action on an element.</li>
 </ul>
 <blockquote>
-<p class="has-line-data" data-line-start="328" data-line-end="329">format : “Xpath = //tagname[@attribute=‘value’]”</p>
+<p class="has-line-data" data-line-start="380" data-line-end="381">format : “Xpath = //tagname[@attribute=‘value’]”</p>
 </blockquote>
 </body></html>
