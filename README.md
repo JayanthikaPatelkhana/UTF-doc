@@ -8,22 +8,42 @@ It is a testing framework, where, we run our scripts for automation testing. It 
 
 Let's understand the working of the tool and the commands by the example script.
 >Example
-```json
-open("https://opensource-demo.orangehrmlive.com/");    // opens the URL
-click("css=#divUsername > .form-hint");               //clicks on the web element by locating it using the css variable
-type("id=txtUsername", "value=Admin");               //types the value "Admin" in the specified text field(located by its id)
-type("id=txtPassword", "value=admin123");           // types the value"admin123"  in the specified text field(located by its id)
-click("id=btnLogin");                              // clicks on the login button using the target locator.
-assertTitle("OrangeHRM");                         // asserts the title of the page
-storeText("css=h1","Dashboard");                 // stores the text of an element/page in the variable
-echo("$(Dashboard)");                           // prints the message or content stored in the variable
-click("css=#menu_time_viewTimeModule > b");    //clicks on the web element
-click("id=menu_time_Timesheets");             //clicks on the web element
-click("id=employee");                        //clicks on the text field
-type("id=employee","Jay");                  // types the text in the text field
-sendKeys("id=employee","${KEY_ENTER}");    // send keys does the action of "enter" button.
+```sh
+open("https://opensource-demo.orangehrmlive.com/");    # opens the URL
+click("css=#divUsername > .form-hint");               #clicks on the web element by locating it using the css variable
+type("id=txtUsername", "value=Admin");               #types the value "Admin" in the specified text field(located by its id)
+type("id=txtPassword", "value=admin123");           # types the value"admin123"  in the specified text field(located by its id)
+click("id=btnLogin");                              # clicks on the login button using the target locator.
+assertTitle("OrangeHRM");                         # asserts the title of the page
+storeText("css=h1","Dashboard");                 # stores the text of an element/page in the variable
+echo("$(Dashboard)");                           # prints the message or content stored in the variable
+click("css=#menu_time_viewTimeModule > b");    #clicks on the web element
+click("id=menu_time_Timesheets");             #clicks on the web element
+click("id=employee");                        #clicks on the text field
+type("id=employee","Jay");                  # types the text in the text field
+sendKeys("id=employee","${KEY_ENTER}");    # send keys does the action of "enter" button.
 ```
 
+## Element Selector
+
+Element selector is a command used to locate/identify web element in a web page and operate the web element using the UTF commands. To precisely locate/identify a Web element and create an automation script different element selectors are used.
+
+
+ * "id" is an element selector, which locates/identifies a web element by its "id" and returns value of an element or perform action on an element.
+ >format : "id = id of an element"
+
+ * "name" is an element selector, which locates/identifies a web element by its name and returns value of an element or perform action on an element.
+ >format : "name = name of an element"
+
+ * "linkText" is an element selector, which locates/identifies a text or link in the web page.
+ >format : "linkText = Text_of_Link"
+
+ * "css" is an element selector, which loactes/identifies a web element by its CSS class in the web page.
+ >format : "css = tag.(id/class/name)"
+
+
+ * "Xpath" is an element selector, which locates/identifies a web element by the Xpath in a web page and returns value of an element or perform action on an element.
+ >format : "Xpath = //tagname[@attribute='value']"
 
 
 ## UTF commands
@@ -333,7 +353,7 @@ pause("Wait time in milliseconds");
 
 
 
-# Control Flow
+## Control Flow
 
 
 
@@ -359,26 +379,7 @@ statement;
 
 
 
-# Element Selector
 
-Element selector is a command used to locate/identify web element in a web page and operate the web element using the UTF commands. To precisely locate/identify a Web element and create an automation script different element selectors are used.
-
-
- * "id" is an element selector, which locates/identifies a web element by its "id" and returns value of an element or perform action on an element.
- >format : "id = id of an element"
-
- * "name" is an element selector, which locates/identifies a web element by its name and returns value of an element or perform action on an element.
- >format : "name = name of an element"
-
- * "linkText" is an element selector, which locates/identifies a text or link in the web page.
- >format : "linkText = Text_of_Link"
-
- * "css" is an element selector, which loactes/identifies a web element by its CSS class in the web page.
- >format : "css = tag.(id/class/name)"
-
-
- * "Xpath" is an element selector, which locates/identifies a web element by the Xpath in a web page and returns value of an element or perform action on an element.
- >format : "Xpath = //tagname[@attribute='value']"
  
 
 
