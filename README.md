@@ -50,6 +50,24 @@ Element selector is a command used to locate/identify web element in a web page 
 
 
 
+* **addSelection**
+
+
+It adds a selection to the set of options in a multi-select element.
+>Syntax
+```sh
+addSelection("elementSelector","value");
+```
+
+* **assert**
+
+It checks whether a variable is an expected value. The variable's value will be converted to a string for comparison. The test will stop if the assert fails.
+>Syntax
+```sh
+assert("elementSelector", "value");
+```
+
+
 * **assertChecked**
 
 
@@ -68,6 +86,35 @@ The "assertNotChecked" command is used to confirm, that the element is not check
 ```sh
 assertNotChecked("elementSelector");
 ```
+
+* **assertSelectedLabel**
+
+It confirms that the label of the selected option in a dropdown element contains the provided value?text. The test will stop if the assert fails.
+
+>Syntax
+```sh
+assertSelectedLabel("elementSelector", "value/Text");
+```
+
+* **assertSelectedValue**
+
+It confirms that the value attribute of the selected option in a dropdown element contains the provided value. The test will stop if the assert fails.
+
+>Syntax
+```sh
+assertSelectedValue("elementSelector", "value");
+```
+
+* **assertText**
+
+
+The "assertText" command is used to confirm, that the text of an element equals the text provided. The test case execution stops if the assert fails.
+
+>Syntax
+```sh
+assrtText("elementSelector", "text");
+```
+
 * **assertTitle**
 
 
@@ -86,6 +133,31 @@ The "assertValue" command will confirm the value of an input field. For checkbox
 >Syntax
 ```sh
 assertValue("elementSelector", "text/value");
+```
+
+* **assertElementPresent**
+
+It checks whether the element is present in the page. The test execution will stop if assert fails.
+>Syntax
+```sh
+assertElementPresent("elementSelector", "value");
+```
+
+* **assertElementNotPresent**
+
+It checks if the element is not present in the page. The test execution stops if assert fails.
+>Syntax
+```sh
+assertElementNotPresent("elementSelector", "value");
+```
+
+* **assertNotSelectedValue**
+
+It checks the value attribute of the selected option in a dropdown element does not contain the provided value. The test will stop if the assert fails.
+
+>Syntax
+```sh
+assertNotSelectedValue("elementSelector", "value");
 ```
 
 * **assertEditable**
@@ -203,6 +275,14 @@ mouseDown("elementSelector");
 mouseDownAt("elementSelector", "coords");
 ```
 
+* **mouseMove**
+
+The "mouseMove" will simulate a user to press the mouse button.
+>Syntax
+```sh
+mouseMove("elementSelector");
+```
+
 * **mouseMoveAt**
 
 
@@ -229,6 +309,14 @@ mouseOver("elementSelector");
 ```sh
 mouseUp("elementSelector");
 ```
+
+* **mouseUpAt**
+"mouseUpAt" simulates the event of releasing the mouse button, stops holding the button down at specified location.
+>Syntax
+```sh
+mouseUpAt("elementSelector", "coords");
+```
+
 
 * **open**
 
@@ -265,6 +353,22 @@ It helps to remove a selection from the set of selected options in a multi-selec
 ```sh
 removeSelection("elementSelector", "value");
 ```
+* **select**
+
+It selects an element from the drop-down menu using any of the elementSelector. If elementSelector is not provided, a match can be attempted using the label/Text of the element.
+>Syntax
+```sh
+select("elementSelector", "Text");
+```
+
+* **selectFrame**
+
+Selects a frame within the current window. You can select a frame by its 0-based index number (e.g., select the first frame with "index=0", or the third frame with "index=2"). For nested frames you will need to invoke this command multiple times (once for each frame in the tree until you reach your desired frame). You can select the parent frame with "relative=parent". To return to the top of the page use "relative=top".
+>Syntax
+```sh
+selectFrame("elementSelector");
+```
+
 * **sendKeys** 
 
 
@@ -350,10 +454,18 @@ The "uncheck" command , unchecks on the checkbox or a radio button. It does the 
 ```sh
 uncheck("elementSelector");
 ```
+
+* **verify**
+
+It just verifies a variable is an expected value. The variable's value will be converted to a string for comparison. The test will continue even if the verify fails.
+>Syntax
+```sh
+verify("elementSelector", "value");
+```
 * **verifyChecked**
 
 
-It verifies whether, a radio button/check box is checked. The test execution continues even if the verify fails.
+It just verifies whether, a radio button/check box is checked. The test execution continues even if the verify fails.
 >Syntax
 ```sh
 verifyChecked("elementSelector");
@@ -361,7 +473,7 @@ verifyChecked("elementSelector");
 * **verifyEditable**
 
 
-It verifies, if the specified input(text/value) is editable. The test execution continues even if the verify fails.
+It just verifies, if the specified input(text/value) is editable. The test execution continues even if the verify fails.
 >Syntax
 ```sh
 verifyEditable("elementSelector");
@@ -369,7 +481,7 @@ verifyEditable("elementSelector");
 * **verifyElementPresent**
 
 
-It will verify, if the element is present in the page. The test excution continues even if the verify fails.
+It will just verify, if the element is present in the page. The test excution continues even if the verify fails.
 >Syntax
 ```sh
 verifyElementPresent("elementSelector");
@@ -377,15 +489,24 @@ verifyElementPresent("elementSelector");
 * **verifyElementNotPresent**
 
 
-It will verify, if the element is not present in the page. The test execution continues even the verify fails.
+It will just verify, if the element is not present in the page. The test execution continues even the verify fails.
 >Syntax
 ```sh
 verifyElementNotPresent("elementSelector");
 ```
+
+* **verifyNotSelectedValue**
+
+It just verifies, whether the expected value is not selected from the drop down list. The test will continue even if verify fails.
+>Syntax
+```sh
+verifyNotSelectedValue("elementSelector", "value");
+```
+
 * **verifyNotChecked**
 
 
-It verifies whether, a radio button/checkbox is not checked. The test execution continues even if the verify fails.
+It just verifies whether, a radio button/checkbox is not checked. The test execution continues even if the verify fails.
 >Syntax
 ```sh
 verifyNotChecked("elementSelector");
@@ -393,7 +514,7 @@ verifyNotChecked("elementSelector");
 * **verifyNotEditable**
 
 
-It verifies, if the specified input(text/value) is not editable. The test execution continues even if the verify fails.
+It just verifies, if the specified input(text/value) is not editable. The test execution continues even if the verify fails.
 >Syntax
 ```sh
 verifyNotEditable("elementSelector");
@@ -401,19 +522,54 @@ verifyNotEditable("elementSelector");
 * **verifyNotText**
 
 
-It verifies, if the text of an element is present. The test execution continues even if the verify fails.
+It just verifies, if the text of an element is present. The test execution continues even if the verify fails.
 >Syntax
 ```sh
 verifyNotText("text/Value");
 ```
+
+* **verifySelectedLabel**
+
+It just verifies, whether the label of a selected element in a drop-down menu, matches the provided value/text. The test continues even if the verify fails.
+>Syntax
+```sh
+verifySelectedLabel("elementSelector", "Text");
+```
+
+* **verifySelectedValue**
+
+It just verifies, whether the expected element has been chosen in a select menu by its value. The test will continue even if the verify fails.
+>Syntax
+```sh
+verifySelectedValue("elementSelector", "value");
+```
+
+* **verifyText**
+
+It just verifies, whether the text provided matches the text of an element in the page. The test continues even if verify fails.
+
+>Syntax
+```sh
+verifyText("elementSelector","text");
+```
+
 * **verifyTitle**
 
 
-It will verify whether the title of the current page matches with the provided text. The test execution will continue even if the verify fails.
+It will just verify whether the title of the current page matches with the provided text. The test execution will continue even if the verify fails.
 >Syntax
 ```sh
 verifyTitle("text");
 ```
+* **verifyValue**
+
+It will just verify the value of an input field.For checkbox/radio elements, the value will be "on" or "off" depending on whether the element is checked or not. The test will continue even if the verify fails.
+
+>Syntax
+```sh
+verifyValue("elementSelector","value");
+```
+
 * **waitForElementEditable**
 
 
@@ -448,6 +604,13 @@ It will wait some time for the target element to be visible in the page.
 >Syntax
 ```sh
 waitForElementVisible("elementSelector", "wait time in ms");
+```
+* **waitForElementNotEditable**
+
+It will wait for an element not to be editable.
+>Syntax
+```sh
+waitForElementNotEditable("elementSelector", "wait time in ms");
 ```
 
 * **waitForElementNotVisible**
