@@ -5,23 +5,39 @@ It is a testing framework, where, we run our scripts for automation testing. It 
 - uploading an excel sheet, 
 - record and play back
 - script editor
-
-Let's understand the working of the tool and the commands by the example script.
->Example
 ```sh
-open("https://opensource-demo.orangehrmlive.com/");    # opens the URL
-click("css=#divUsername > .form-hint");               #clicks on the web element by locating it using the css variable
-type("id=txtUsername", "value=Admin");               #types the value "Admin" in the specified text field(located by its id)
-type("id=txtPassword", "value=admin123");           # types the value"admin123"  in the specified text field(located by its id)
-click("id=btnLogin");                              # clicks on the login button using the target locator.
-assertTitle("OrangeHRM");                         # asserts the title of the page
-storeText("css=h1","Dashboard");                 # stores the text of an element/page in the variable
-echo("$(Dashboard)");                           # prints the message or content stored in the variable
-click("css=#menu_time_viewTimeModule > b");    #clicks on the web element
-click("id=menu_time_Timesheets");             #clicks on the web element
-click("id=employee");                        #clicks on the text field
-type("id=employee","Jay");                  # types the text in the text field
-sendKeys("id=employee","${KEY_ENTER}");    # send keys does the action of "enter" button.
+#============================================================
+# This Test Case is an example to show case the functionality
+# It uses an HR Management Demo Website for demonstration
+#============================================================
+
+#open website
+open("https://opensource-demo.orangehrmlive.com/");
+
+username="Admin";
+password="admin123";
+
+#Enter login credentials
+type("id=txtUsername",username);
+type("id=txtPassword",password);
+
+#click on login
+click("id=btnLogin");
+
+#check if login was successfuly by verifying Welcome Message
+assertText("id=welcome1","Welcome "+username);
+
+#click on Admin Tab
+click("xpath=/html/body/div[1]/div[2]/ul/li[1]/a/b");
+
+#search for user admin
+type("id=searchSystemUser_userName", username);
+
+#click on search button
+click("id=searchBtn");
+
+#check if user admin is found  
+assertText("xpath=/html/body/div[1]/div[3]/div[2]/div/div/form/div[4]/table/tbody/tr/td[2]/a",username);
 ```
 
 ## Element Selector
