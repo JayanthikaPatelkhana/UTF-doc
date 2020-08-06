@@ -83,6 +83,21 @@ It checks whether a variable is an expected value. The variable's value will be 
 assert("elementSelector", "value");
 ```
 
+* **assertAlert**
+
+It checks for the alert with the provided text. The test will stop if the assert fails.
+>Syntax
+```sh
+assertAlert("value");
+```
+
+* **assertConfirmation**
+
+It checks that a confirmation has been rendered. The test fails if the assert fails.
+>Syntax
+```sh
+assertConfirmation("value");
+```
 
 * **assertChecked**
 
@@ -101,6 +116,15 @@ The "assertNotChecked" command is used to confirm, that the element is not check
 >Syntax
 ```sh
 assertNotChecked("elementSelector");
+```
+
+* **assertPrompt**
+
+It checks whether a prompt has been rendered. The test case execution stops if the assert fails.
+
+>Syntax
+```sh
+assertPrompt("value");
 ```
 
 * **assertSelectedLabel**
@@ -229,11 +253,21 @@ click("elementSelector");
 * **clickAt**
 
 
-"clickAt" will click on the element in a specified location.
+"clickAt" will click / select a hyperlink, button, radio option and checkbox option in a specified location using the coordinates relative to the element.
+
 >Syntax
 ```sh
 clickAt("elementSelector", "coords");
 ```
+
+* **close**
+
+It closes the current window.
+>Syntax
+```sh
+close;
+```
+
 * **doubleClick**
 
 
@@ -250,6 +284,15 @@ doubleClick("elementSelector");
 ```sh
 doubleClickAt("elementSelector", "coords");
 ```
+
+* **dragAndDropToObject**
+
+It drags an element from a location and drops it on other element location.
+>Syntax
+```sh
+dragAndDropToObject("elementSelector", "value");
+```
+
 * **echo**
 
 
@@ -385,6 +428,14 @@ Selects a frame within the current window. You can select a frame by its 0-based
 selectFrame("elementSelector");
 ```
 
+* **selectWindow**
+
+It selects a popup window using window locator and later on the required actions will be done on the selected window.
+>Syntax
+```sh
+selectWindow("elementSelector");
+```
+
 * **sendKeys** 
 
 
@@ -453,6 +504,16 @@ storeTitle("elementSelector", "variable name");
 ```sh
 storeAttribute("elementSelector", "variable name");
 ```
+
+* **storeWindowHandle**
+
+It gets the handle of the window/tab of the current page.
+
+>Syntax
+```sh
+storeWindowHandle("elementSelector");
+```
+
 * **type** 
 
 

@@ -92,572 +92,635 @@ assertText(<span class="hljs-string">"xpath=/html/body/div[1]/div[3]/div[2]/div/
 <pre><code class="has-line-data" data-line-start="82" data-line-end="84" class="language-sh">assert(<span class="hljs-string">"elementSelector"</span>, <span class="hljs-string">"value"</span>);
 </code></pre>
 <ul>
-<li class="has-line-data" data-line-start="86" data-line-end="87"><strong>assertChecked</strong></li>
+<li class="has-line-data" data-line-start="85" data-line-end="87"><strong>assertAlert</strong></li>
 </ul>
-<p class="has-line-data" data-line-start="89" data-line-end="90">The “assertChecked” command is used to confirm, that the element is checked or not. The test case execution stops if the assert fails.</p>
+<p class="has-line-data" data-line-start="87" data-line-end="88">It checks for the alert with the provided text. The test will stop if the assert fails.</p>
 <blockquote>
-<p class="has-line-data" data-line-start="90" data-line-end="91">Syntax</p>
+<p class="has-line-data" data-line-start="88" data-line-end="89">Syntax</p>
 </blockquote>
-<pre><code class="has-line-data" data-line-start="92" data-line-end="94" class="language-sh">assertChecked(<span class="hljs-string">"elementSelector"</span>);
+<pre><code class="has-line-data" data-line-start="90" data-line-end="92" class="language-sh">assertAlert(<span class="hljs-string">"value"</span>);
 </code></pre>
 <ul>
-<li class="has-line-data" data-line-start="94" data-line-end="95"><strong>assertNotChecked</strong></li>
+<li class="has-line-data" data-line-start="93" data-line-end="95"><strong>assertConfirmation</strong></li>
 </ul>
-<p class="has-line-data" data-line-start="97" data-line-end="98">The “assertNotChecked” command is used to confirm, that the element is not checked. The test case execution stops if the assert fails.</p>
+<p class="has-line-data" data-line-start="95" data-line-end="96">It checks that a confirmation has been rendered. The test fails if the assert fails.</p>
 <blockquote>
-<p class="has-line-data" data-line-start="100" data-line-end="101">Syntax</p>
+<p class="has-line-data" data-line-start="96" data-line-end="97">Syntax</p>
 </blockquote>
-<pre><code class="has-line-data" data-line-start="102" data-line-end="104" class="language-sh">assertNotChecked(<span class="hljs-string">"elementSelector"</span>);
+<pre><code class="has-line-data" data-line-start="98" data-line-end="100" class="language-sh">assertConfirmation(<span class="hljs-string">"value"</span>);
 </code></pre>
 <ul>
-<li class="has-line-data" data-line-start="105" data-line-end="107"><strong>assertSelectedLabel</strong></li>
+<li class="has-line-data" data-line-start="101" data-line-end="102"><strong>assertChecked</strong></li>
 </ul>
-<p class="has-line-data" data-line-start="107" data-line-end="108">It confirms that the label of the selected option in a dropdown element contains the provided value?text. The test will stop if the assert fails.</p>
+<p class="has-line-data" data-line-start="104" data-line-end="105">The “assertChecked” command is used to confirm, that the element is checked or not. The test case execution stops if the assert fails.</p>
 <blockquote>
-<p class="has-line-data" data-line-start="109" data-line-end="110">Syntax</p>
+<p class="has-line-data" data-line-start="105" data-line-end="106">Syntax</p>
 </blockquote>
-<pre><code class="has-line-data" data-line-start="111" data-line-end="113" class="language-sh">assertSelectedLabel(<span class="hljs-string">"elementSelector"</span>, <span class="hljs-string">"value/Text"</span>);
+<pre><code class="has-line-data" data-line-start="107" data-line-end="109" class="language-sh">assertChecked(<span class="hljs-string">"elementSelector"</span>);
 </code></pre>
 <ul>
-<li class="has-line-data" data-line-start="114" data-line-end="116"><strong>assertSelectedValue</strong></li>
+<li class="has-line-data" data-line-start="109" data-line-end="110"><strong>assertNotChecked</strong></li>
 </ul>
-<p class="has-line-data" data-line-start="116" data-line-end="117">It confirms that the value attribute of the selected option in a dropdown element contains the provided value. The test will stop if the assert fails.</p>
+<p class="has-line-data" data-line-start="112" data-line-end="113">The “assertNotChecked” command is used to confirm, that the element is not checked. The test case execution stops if the assert fails.</p>
 <blockquote>
-<p class="has-line-data" data-line-start="118" data-line-end="119">Syntax</p>
+<p class="has-line-data" data-line-start="115" data-line-end="116">Syntax</p>
 </blockquote>
-<pre><code class="has-line-data" data-line-start="120" data-line-end="122" class="language-sh">assertSelectedValue(<span class="hljs-string">"elementSelector"</span>, <span class="hljs-string">"value"</span>);
+<pre><code class="has-line-data" data-line-start="117" data-line-end="119" class="language-sh">assertNotChecked(<span class="hljs-string">"elementSelector"</span>);
 </code></pre>
 <ul>
-<li class="has-line-data" data-line-start="123" data-line-end="124"><strong>assertText</strong></li>
+<li class="has-line-data" data-line-start="120" data-line-end="122"><strong>assertPrompt</strong></li>
 </ul>
-<p class="has-line-data" data-line-start="126" data-line-end="127">The “assertText” command is used to confirm, that the text of an element equals the text provided. The test case execution stops if the assert fails.</p>
+<p class="has-line-data" data-line-start="122" data-line-end="123">It checks whether a prompt has been rendered. The test case execution stops if the assert fails.</p>
 <blockquote>
-<p class="has-line-data" data-line-start="128" data-line-end="129">Syntax</p>
+<p class="has-line-data" data-line-start="124" data-line-end="125">Syntax</p>
 </blockquote>
-<pre><code class="has-line-data" data-line-start="130" data-line-end="132" class="language-sh">assrtText(<span class="hljs-string">"elementSelector"</span>, <span class="hljs-string">"text"</span>);
+<pre><code class="has-line-data" data-line-start="126" data-line-end="128" class="language-sh">assertPrompt(<span class="hljs-string">"value"</span>);
 </code></pre>
 <ul>
-<li class="has-line-data" data-line-start="133" data-line-end="134"><strong>assertTitle</strong></li>
+<li class="has-line-data" data-line-start="129" data-line-end="131"><strong>assertSelectedLabel</strong></li>
 </ul>
-<p class="has-line-data" data-line-start="136" data-line-end="137">The “assertTitle” command is used to confirm, that the title of the current page equals the text provided. The test case execution stops if the assert fails.</p>
+<p class="has-line-data" data-line-start="131" data-line-end="132">It confirms that the label of the selected option in a dropdown element contains the provided value?text. The test will stop if the assert fails.</p>
 <blockquote>
-<p class="has-line-data" data-line-start="138" data-line-end="139">Syntax</p>
+<p class="has-line-data" data-line-start="133" data-line-end="134">Syntax</p>
 </blockquote>
-<pre><code class="has-line-data" data-line-start="140" data-line-end="142" class="language-sh">assertTitle(<span class="hljs-string">"text"</span>);
+<pre><code class="has-line-data" data-line-start="135" data-line-end="137" class="language-sh">assertSelectedLabel(<span class="hljs-string">"elementSelector"</span>, <span class="hljs-string">"value/Text"</span>);
 </code></pre>
 <ul>
-<li class="has-line-data" data-line-start="143" data-line-end="144"><strong>assertValue</strong></li>
+<li class="has-line-data" data-line-start="138" data-line-end="140"><strong>assertSelectedValue</strong></li>
 </ul>
-<p class="has-line-data" data-line-start="146" data-line-end="147">The “assertValue” command will confirm the value of an input field. For checkbox/radio elements, the value will be “on” or “off” depending on whether the element is checked or not. The test will stop if the assert fails.</p>
+<p class="has-line-data" data-line-start="140" data-line-end="141">It confirms that the value attribute of the selected option in a dropdown element contains the provided value. The test will stop if the assert fails.</p>
 <blockquote>
-<p class="has-line-data" data-line-start="148" data-line-end="149">Syntax</p>
+<p class="has-line-data" data-line-start="142" data-line-end="143">Syntax</p>
 </blockquote>
-<pre><code class="has-line-data" data-line-start="150" data-line-end="152" class="language-sh">assertValue(<span class="hljs-string">"elementSelector"</span>, <span class="hljs-string">"text/value"</span>);
+<pre><code class="has-line-data" data-line-start="144" data-line-end="146" class="language-sh">assertSelectedValue(<span class="hljs-string">"elementSelector"</span>, <span class="hljs-string">"value"</span>);
 </code></pre>
 <ul>
-<li class="has-line-data" data-line-start="153" data-line-end="155"><strong>assertElementPresent</strong></li>
+<li class="has-line-data" data-line-start="147" data-line-end="148"><strong>assertText</strong></li>
 </ul>
-<p class="has-line-data" data-line-start="155" data-line-end="156">It checks whether the element is present in the page. The test execution will stop if assert fails.</p>
+<p class="has-line-data" data-line-start="150" data-line-end="151">The “assertText” command is used to confirm, that the text of an element equals the text provided. The test case execution stops if the assert fails.</p>
 <blockquote>
-<p class="has-line-data" data-line-start="156" data-line-end="157">Syntax</p>
+<p class="has-line-data" data-line-start="152" data-line-end="153">Syntax</p>
 </blockquote>
-<pre><code class="has-line-data" data-line-start="158" data-line-end="160" class="language-sh">assertElementPresent(<span class="hljs-string">"elementSelector"</span>, <span class="hljs-string">"value"</span>);
+<pre><code class="has-line-data" data-line-start="154" data-line-end="156" class="language-sh">assrtText(<span class="hljs-string">"elementSelector"</span>, <span class="hljs-string">"text"</span>);
 </code></pre>
 <ul>
-<li class="has-line-data" data-line-start="161" data-line-end="163"><strong>assertElementNotPresent</strong></li>
+<li class="has-line-data" data-line-start="157" data-line-end="158"><strong>assertTitle</strong></li>
 </ul>
-<p class="has-line-data" data-line-start="163" data-line-end="164">It checks if the element is not present in the page. The test execution stops if assert fails.</p>
+<p class="has-line-data" data-line-start="160" data-line-end="161">The “assertTitle” command is used to confirm, that the title of the current page equals the text provided. The test case execution stops if the assert fails.</p>
 <blockquote>
-<p class="has-line-data" data-line-start="164" data-line-end="165">Syntax</p>
+<p class="has-line-data" data-line-start="162" data-line-end="163">Syntax</p>
 </blockquote>
-<pre><code class="has-line-data" data-line-start="166" data-line-end="168" class="language-sh">assertElementNotPresent(<span class="hljs-string">"elementSelector"</span>, <span class="hljs-string">"value"</span>);
+<pre><code class="has-line-data" data-line-start="164" data-line-end="166" class="language-sh">assertTitle(<span class="hljs-string">"text"</span>);
 </code></pre>
 <ul>
-<li class="has-line-data" data-line-start="169" data-line-end="171"><strong>assertNotSelectedValue</strong></li>
+<li class="has-line-data" data-line-start="167" data-line-end="168"><strong>assertValue</strong></li>
 </ul>
-<p class="has-line-data" data-line-start="171" data-line-end="172">It checks the value attribute of the selected option in a dropdown element does not contain the provided value. The test will stop if the assert fails.</p>
+<p class="has-line-data" data-line-start="170" data-line-end="171">The “assertValue” command will confirm the value of an input field. For checkbox/radio elements, the value will be “on” or “off” depending on whether the element is checked or not. The test will stop if the assert fails.</p>
 <blockquote>
-<p class="has-line-data" data-line-start="173" data-line-end="174">Syntax</p>
+<p class="has-line-data" data-line-start="172" data-line-end="173">Syntax</p>
 </blockquote>
-<pre><code class="has-line-data" data-line-start="175" data-line-end="177" class="language-sh">assertNotSelectedValue(<span class="hljs-string">"elementSelector"</span>, <span class="hljs-string">"value"</span>);
+<pre><code class="has-line-data" data-line-start="174" data-line-end="176" class="language-sh">assertValue(<span class="hljs-string">"elementSelector"</span>, <span class="hljs-string">"text/value"</span>);
 </code></pre>
 <ul>
-<li class="has-line-data" data-line-start="178" data-line-end="179"><strong>assertEditable</strong></li>
+<li class="has-line-data" data-line-start="177" data-line-end="179"><strong>assertElementPresent</strong></li>
 </ul>
-<p class="has-line-data" data-line-start="181" data-line-end="182">The “assertEditable” is used to check whether the element is editable. The test execution stops if the assert fails.</p>
+<p class="has-line-data" data-line-start="179" data-line-end="180">It checks whether the element is present in the page. The test execution will stop if assert fails.</p>
 <blockquote>
-<p class="has-line-data" data-line-start="182" data-line-end="183">Syntax</p>
+<p class="has-line-data" data-line-start="180" data-line-end="181">Syntax</p>
 </blockquote>
-<pre><code class="has-line-data" data-line-start="184" data-line-end="186" class="language-sh">assertEditable(<span class="hljs-string">"elementSelector"</span>);
+<pre><code class="has-line-data" data-line-start="182" data-line-end="184" class="language-sh">assertElementPresent(<span class="hljs-string">"elementSelector"</span>, <span class="hljs-string">"value"</span>);
 </code></pre>
 <ul>
-<li class="has-line-data" data-line-start="187" data-line-end="188"><strong>assertNotEditable</strong></li>
+<li class="has-line-data" data-line-start="185" data-line-end="187"><strong>assertElementNotPresent</strong></li>
 </ul>
-<p class="has-line-data" data-line-start="190" data-line-end="191">The “assertNotEditable” will check whether the element is not editable. The test execution will stop if the assert fails.</p>
+<p class="has-line-data" data-line-start="187" data-line-end="188">It checks if the element is not present in the page. The test execution stops if assert fails.</p>
 <blockquote>
-<p class="has-line-data" data-line-start="191" data-line-end="192">Syntax</p>
+<p class="has-line-data" data-line-start="188" data-line-end="189">Syntax</p>
 </blockquote>
-<pre><code class="has-line-data" data-line-start="193" data-line-end="195" class="language-sh">assertNotEditable(<span class="hljs-string">"elementSelector"</span>);
+<pre><code class="has-line-data" data-line-start="190" data-line-end="192" class="language-sh">assertElementNotPresent(<span class="hljs-string">"elementSelector"</span>, <span class="hljs-string">"value"</span>);
 </code></pre>
 <ul>
-<li class="has-line-data" data-line-start="196" data-line-end="197"><strong>assertNotText</strong></li>
+<li class="has-line-data" data-line-start="193" data-line-end="195"><strong>assertNotSelectedValue</strong></li>
 </ul>
-<p class="has-line-data" data-line-start="199" data-line-end="200">The “assertNotText” will check, if the text of an element does not contain the provided text.</p>
+<p class="has-line-data" data-line-start="195" data-line-end="196">It checks the value attribute of the selected option in a dropdown element does not contain the provided value. The test will stop if the assert fails.</p>
 <blockquote>
-<p class="has-line-data" data-line-start="200" data-line-end="201">Syntax</p>
+<p class="has-line-data" data-line-start="197" data-line-end="198">Syntax</p>
 </blockquote>
-<pre><code class="has-line-data" data-line-start="202" data-line-end="204" class="language-sh">assertNotText(<span class="hljs-string">"elementSelector"</span>, <span class="hljs-string">"value/text"</span>);
+<pre><code class="has-line-data" data-line-start="199" data-line-end="201" class="language-sh">assertNotSelectedValue(<span class="hljs-string">"elementSelector"</span>, <span class="hljs-string">"value"</span>);
 </code></pre>
 <ul>
-<li class="has-line-data" data-line-start="207" data-line-end="208"><strong>check</strong></li>
+<li class="has-line-data" data-line-start="202" data-line-end="203"><strong>assertEditable</strong></li>
 </ul>
-<p class="has-line-data" data-line-start="210" data-line-end="211">The “check” command , checks on the checkbox or a radio button. It does the similar action of clicking a button or checkbox in a webpage.</p>
+<p class="has-line-data" data-line-start="205" data-line-end="206">The “assertEditable” is used to check whether the element is editable. The test execution stops if the assert fails.</p>
 <blockquote>
-<p class="has-line-data" data-line-start="213" data-line-end="214">Syntax</p>
+<p class="has-line-data" data-line-start="206" data-line-end="207">Syntax</p>
 </blockquote>
-<pre><code class="has-line-data" data-line-start="215" data-line-end="217" class="language-sh">check(<span class="hljs-string">"elementSelector"</span>);
+<pre><code class="has-line-data" data-line-start="208" data-line-end="210" class="language-sh">assertEditable(<span class="hljs-string">"elementSelector"</span>);
 </code></pre>
 <ul>
-<li class="has-line-data" data-line-start="218" data-line-end="219"><strong>click</strong></li>
+<li class="has-line-data" data-line-start="211" data-line-end="212"><strong>assertNotEditable</strong></li>
 </ul>
-<p class="has-line-data" data-line-start="221" data-line-end="222">“click” command is used to click / select an hyperlink, button, radio option and checkbox option.</p>
+<p class="has-line-data" data-line-start="214" data-line-end="215">The “assertNotEditable” will check whether the element is not editable. The test execution will stop if the assert fails.</p>
+<blockquote>
+<p class="has-line-data" data-line-start="215" data-line-end="216">Syntax</p>
+</blockquote>
+<pre><code class="has-line-data" data-line-start="217" data-line-end="219" class="language-sh">assertNotEditable(<span class="hljs-string">"elementSelector"</span>);
+</code></pre>
+<ul>
+<li class="has-line-data" data-line-start="220" data-line-end="221"><strong>assertNotText</strong></li>
+</ul>
+<p class="has-line-data" data-line-start="223" data-line-end="224">The “assertNotText” will check, if the text of an element does not contain the provided text.</p>
 <blockquote>
 <p class="has-line-data" data-line-start="224" data-line-end="225">Syntax</p>
 </blockquote>
-<pre><code class="has-line-data" data-line-start="226" data-line-end="228" class="language-sh">click(<span class="hljs-string">"elementSelector"</span>);
+<pre><code class="has-line-data" data-line-start="226" data-line-end="228" class="language-sh">assertNotText(<span class="hljs-string">"elementSelector"</span>, <span class="hljs-string">"value/text"</span>);
 </code></pre>
 <ul>
-<li class="has-line-data" data-line-start="228" data-line-end="229"><strong>clickAt</strong></li>
+<li class="has-line-data" data-line-start="231" data-line-end="232"><strong>check</strong></li>
 </ul>
-<p class="has-line-data" data-line-start="231" data-line-end="232">“clickAt” will click on the element in a specified location.</p>
+<p class="has-line-data" data-line-start="234" data-line-end="235">The “check” command , checks on the checkbox or a radio button. It does the similar action of clicking a button or checkbox in a webpage.</p>
 <blockquote>
-<p class="has-line-data" data-line-start="232" data-line-end="233">Syntax</p>
+<p class="has-line-data" data-line-start="237" data-line-end="238">Syntax</p>
 </blockquote>
-<pre><code class="has-line-data" data-line-start="234" data-line-end="236" class="language-sh">clickAt(<span class="hljs-string">"elementSelector"</span>, <span class="hljs-string">"coords"</span>);
+<pre><code class="has-line-data" data-line-start="239" data-line-end="241" class="language-sh">check(<span class="hljs-string">"elementSelector"</span>);
 </code></pre>
 <ul>
-<li class="has-line-data" data-line-start="236" data-line-end="237"><strong>doubleClick</strong></li>
+<li class="has-line-data" data-line-start="242" data-line-end="243"><strong>click</strong></li>
 </ul>
-<p class="has-line-data" data-line-start="239" data-line-end="240">It will “doubleClick” on the element.</p>
-<blockquote>
-<p class="has-line-data" data-line-start="240" data-line-end="241">Syntax</p>
-</blockquote>
-<pre><code class="has-line-data" data-line-start="242" data-line-end="244" class="language-sh">doubleClick(<span class="hljs-string">"elementSelector"</span>);
-</code></pre>
-<ul>
-<li class="has-line-data" data-line-start="244" data-line-end="245"><strong>doubleClickAt</strong></li>
-</ul>
-<p class="has-line-data" data-line-start="247" data-line-end="248">“doubleClickAt” will double click on an element at specified coordinated location of the element.</p>
+<p class="has-line-data" data-line-start="245" data-line-end="246">“click” command is used to click / select an hyperlink, button, radio option and checkbox option.</p>
 <blockquote>
 <p class="has-line-data" data-line-start="248" data-line-end="249">Syntax</p>
 </blockquote>
-<pre><code class="has-line-data" data-line-start="250" data-line-end="252" class="language-sh">doubleClickAt(<span class="hljs-string">"elementSelector"</span>, <span class="hljs-string">"coords"</span>);
+<pre><code class="has-line-data" data-line-start="250" data-line-end="252" class="language-sh">click(<span class="hljs-string">"elementSelector"</span>);
 </code></pre>
 <ul>
-<li class="has-line-data" data-line-start="252" data-line-end="253"><strong>echo</strong></li>
+<li class="has-line-data" data-line-start="252" data-line-end="253"><strong>clickAt</strong></li>
 </ul>
-<p class="has-line-data" data-line-start="255" data-line-end="256">The “echo” command prints the message specified. It is used for debugging , whether a specific command/value is executed.</p>
+<p class="has-line-data" data-line-start="255" data-line-end="256">“clickAt” will click / select a hyperlink, button, radio option and checkbox option in a specified location using the coordinates relative to the element.</p>
 <blockquote>
 <p class="has-line-data" data-line-start="257" data-line-end="258">Syntax</p>
 </blockquote>
-<pre><code class="has-line-data" data-line-start="259" data-line-end="261" class="language-sh"><span class="hljs-built_in">echo</span>(<span class="hljs-string">"message to print"</span>);
+<pre><code class="has-line-data" data-line-start="259" data-line-end="261" class="language-sh">clickAt(<span class="hljs-string">"elementSelector"</span>, <span class="hljs-string">"coords"</span>);
 </code></pre>
 <ul>
-<li class="has-line-data" data-line-start="265" data-line-end="266"><strong>mouseOut</strong></li>
+<li class="has-line-data" data-line-start="262" data-line-end="264"><strong>close</strong></li>
 </ul>
-<p class="has-line-data" data-line-start="268" data-line-end="269">The “mouseOut” command is used for moving the mouse pointer away from the specified element.</p>
+<p class="has-line-data" data-line-start="264" data-line-end="265">It closes the current window.</p>
 <blockquote>
-<p class="has-line-data" data-line-start="270" data-line-end="271">Syntax</p>
+<p class="has-line-data" data-line-start="265" data-line-end="266">Syntax</p>
 </blockquote>
-<pre><code class="has-line-data" data-line-start="272" data-line-end="274" class="language-sh">mouseOut(<span class="hljs-string">"elementSelector"</span>);
+<pre><code class="has-line-data" data-line-start="267" data-line-end="269" class="language-sh">close;
 </code></pre>
 <ul>
-<li class="has-line-data" data-line-start="275" data-line-end="276"><strong>mouseDown</strong></li>
+<li class="has-line-data" data-line-start="270" data-line-end="271"><strong>doubleClick</strong></li>
 </ul>
-<p class="has-line-data" data-line-start="278" data-line-end="279">“mouseDown” simulates the event to press the mouse button.</p>
+<p class="has-line-data" data-line-start="273" data-line-end="274">It will “doubleClick” on the element.</p>
 <blockquote>
-<p class="has-line-data" data-line-start="279" data-line-end="280">Syntax</p>
+<p class="has-line-data" data-line-start="274" data-line-end="275">Syntax</p>
 </blockquote>
-<pre><code class="has-line-data" data-line-start="281" data-line-end="283" class="language-sh">mouseDown(<span class="hljs-string">"elementSelector"</span>);
+<pre><code class="has-line-data" data-line-start="276" data-line-end="278" class="language-sh">doubleClick(<span class="hljs-string">"elementSelector"</span>);
 </code></pre>
 <ul>
-<li class="has-line-data" data-line-start="284" data-line-end="285"><strong>mouseDownAt</strong></li>
+<li class="has-line-data" data-line-start="278" data-line-end="279"><strong>doubleClickAt</strong></li>
 </ul>
-<p class="has-line-data" data-line-start="287" data-line-end="288">“mouseDown” simulates the event to press the mouse button at specified location.</p>
+<p class="has-line-data" data-line-start="281" data-line-end="282">“doubleClickAt” will double click on an element at specified coordinated location of the element.</p>
 <blockquote>
-<p class="has-line-data" data-line-start="288" data-line-end="289">Syntax</p>
+<p class="has-line-data" data-line-start="282" data-line-end="283">Syntax</p>
 </blockquote>
-<pre><code class="has-line-data" data-line-start="290" data-line-end="292" class="language-sh">mouseDownAt(<span class="hljs-string">"elementSelector"</span>, <span class="hljs-string">"coords"</span>);
+<pre><code class="has-line-data" data-line-start="284" data-line-end="286" class="language-sh">doubleClickAt(<span class="hljs-string">"elementSelector"</span>, <span class="hljs-string">"coords"</span>);
 </code></pre>
 <ul>
-<li class="has-line-data" data-line-start="293" data-line-end="295"><strong>mouseMove</strong></li>
+<li class="has-line-data" data-line-start="287" data-line-end="289"><strong>dragAndDropToObject</strong></li>
 </ul>
-<p class="has-line-data" data-line-start="295" data-line-end="296">The “mouseMove” will simulate a user to press the mouse button.</p>
+<p class="has-line-data" data-line-start="289" data-line-end="290">It drags an element from a location and drops it on other element location.</p>
 <blockquote>
-<p class="has-line-data" data-line-start="296" data-line-end="297">Syntax</p>
+<p class="has-line-data" data-line-start="290" data-line-end="291">Syntax</p>
 </blockquote>
-<pre><code class="has-line-data" data-line-start="298" data-line-end="300" class="language-sh">mouseMove(<span class="hljs-string">"elementSelector"</span>);
+<pre><code class="has-line-data" data-line-start="292" data-line-end="294" class="language-sh">dragAndDropToObject(<span class="hljs-string">"elementSelector"</span>, <span class="hljs-string">"value"</span>);
 </code></pre>
 <ul>
-<li class="has-line-data" data-line-start="301" data-line-end="302"><strong>mouseMoveAt</strong></li>
+<li class="has-line-data" data-line-start="295" data-line-end="296"><strong>echo</strong></li>
 </ul>
-<p class="has-line-data" data-line-start="304" data-line-end="305">The “mouseMoveAt” will simulate a user to press the mouse button at specified location.</p>
+<p class="has-line-data" data-line-start="298" data-line-end="299">The “echo” command prints the message specified. It is used for debugging , whether a specific command/value is executed.</p>
 <blockquote>
-<p class="has-line-data" data-line-start="305" data-line-end="306">Syntax</p>
+<p class="has-line-data" data-line-start="300" data-line-end="301">Syntax</p>
 </blockquote>
-<pre><code class="has-line-data" data-line-start="307" data-line-end="309" class="language-sh">mouseMoveAt(<span class="hljs-string">"elementSelector"</span>, <span class="hljs-string">"coords"</span>);
+<pre><code class="has-line-data" data-line-start="302" data-line-end="304" class="language-sh"><span class="hljs-built_in">echo</span>(<span class="hljs-string">"message to print"</span>);
 </code></pre>
 <ul>
-<li class="has-line-data" data-line-start="310" data-line-end="311"><strong>mouseOver</strong></li>
+<li class="has-line-data" data-line-start="308" data-line-end="309"><strong>mouseOut</strong></li>
 </ul>
-<p class="has-line-data" data-line-start="313" data-line-end="314">The “mouseOver” simulates a user to hover on the specified element.</p>
+<p class="has-line-data" data-line-start="311" data-line-end="312">The “mouseOut” command is used for moving the mouse pointer away from the specified element.</p>
 <blockquote>
-<p class="has-line-data" data-line-start="314" data-line-end="315">Syntax</p>
+<p class="has-line-data" data-line-start="313" data-line-end="314">Syntax</p>
 </blockquote>
-<pre><code class="has-line-data" data-line-start="316" data-line-end="318" class="language-sh">mouseOver(<span class="hljs-string">"elementSelector"</span>);
+<pre><code class="has-line-data" data-line-start="315" data-line-end="317" class="language-sh">mouseOut(<span class="hljs-string">"elementSelector"</span>);
 </code></pre>
 <ul>
-<li class="has-line-data" data-line-start="319" data-line-end="320"><strong>mouseUp</strong></li>
+<li class="has-line-data" data-line-start="318" data-line-end="319"><strong>mouseDown</strong></li>
 </ul>
-<p class="has-line-data" data-line-start="322" data-line-end="323">“mouseUp” simulates the event of releasing the mouse button, stops holding the button down.</p>
+<p class="has-line-data" data-line-start="321" data-line-end="322">“mouseDown” simulates the event to press the mouse button.</p>
 <blockquote>
-<p class="has-line-data" data-line-start="323" data-line-end="324">Syntax</p>
+<p class="has-line-data" data-line-start="322" data-line-end="323">Syntax</p>
 </blockquote>
-<pre><code class="has-line-data" data-line-start="325" data-line-end="327" class="language-sh">mouseUp(<span class="hljs-string">"elementSelector"</span>);
+<pre><code class="has-line-data" data-line-start="324" data-line-end="326" class="language-sh">mouseDown(<span class="hljs-string">"elementSelector"</span>);
 </code></pre>
 <ul>
-<li class="has-line-data" data-line-start="328" data-line-end="330"><strong>mouseUpAt</strong><br>
+<li class="has-line-data" data-line-start="327" data-line-end="328"><strong>mouseDownAt</strong></li>
+</ul>
+<p class="has-line-data" data-line-start="330" data-line-end="331">“mouseDown” simulates the event to press the mouse button at specified location.</p>
+<blockquote>
+<p class="has-line-data" data-line-start="331" data-line-end="332">Syntax</p>
+</blockquote>
+<pre><code class="has-line-data" data-line-start="333" data-line-end="335" class="language-sh">mouseDownAt(<span class="hljs-string">"elementSelector"</span>, <span class="hljs-string">"coords"</span>);
+</code></pre>
+<ul>
+<li class="has-line-data" data-line-start="336" data-line-end="338"><strong>mouseMove</strong></li>
+</ul>
+<p class="has-line-data" data-line-start="338" data-line-end="339">The “mouseMove” will simulate a user to press the mouse button.</p>
+<blockquote>
+<p class="has-line-data" data-line-start="339" data-line-end="340">Syntax</p>
+</blockquote>
+<pre><code class="has-line-data" data-line-start="341" data-line-end="343" class="language-sh">mouseMove(<span class="hljs-string">"elementSelector"</span>);
+</code></pre>
+<ul>
+<li class="has-line-data" data-line-start="344" data-line-end="345"><strong>mouseMoveAt</strong></li>
+</ul>
+<p class="has-line-data" data-line-start="347" data-line-end="348">The “mouseMoveAt” will simulate a user to press the mouse button at specified location.</p>
+<blockquote>
+<p class="has-line-data" data-line-start="348" data-line-end="349">Syntax</p>
+</blockquote>
+<pre><code class="has-line-data" data-line-start="350" data-line-end="352" class="language-sh">mouseMoveAt(<span class="hljs-string">"elementSelector"</span>, <span class="hljs-string">"coords"</span>);
+</code></pre>
+<ul>
+<li class="has-line-data" data-line-start="353" data-line-end="354"><strong>mouseOver</strong></li>
+</ul>
+<p class="has-line-data" data-line-start="356" data-line-end="357">The “mouseOver” simulates a user to hover on the specified element.</p>
+<blockquote>
+<p class="has-line-data" data-line-start="357" data-line-end="358">Syntax</p>
+</blockquote>
+<pre><code class="has-line-data" data-line-start="359" data-line-end="361" class="language-sh">mouseOver(<span class="hljs-string">"elementSelector"</span>);
+</code></pre>
+<ul>
+<li class="has-line-data" data-line-start="362" data-line-end="363"><strong>mouseUp</strong></li>
+</ul>
+<p class="has-line-data" data-line-start="365" data-line-end="366">“mouseUp” simulates the event of releasing the mouse button, stops holding the button down.</p>
+<blockquote>
+<p class="has-line-data" data-line-start="366" data-line-end="367">Syntax</p>
+</blockquote>
+<pre><code class="has-line-data" data-line-start="368" data-line-end="370" class="language-sh">mouseUp(<span class="hljs-string">"elementSelector"</span>);
+</code></pre>
+<ul>
+<li class="has-line-data" data-line-start="371" data-line-end="373"><strong>mouseUpAt</strong><br>
 “mouseUpAt” simulates the event of releasing the mouse button, stops holding the button down at specified location.</li>
 </ul>
 <blockquote>
-<p class="has-line-data" data-line-start="330" data-line-end="331">Syntax</p>
+<p class="has-line-data" data-line-start="373" data-line-end="374">Syntax</p>
 </blockquote>
-<pre><code class="has-line-data" data-line-start="332" data-line-end="334" class="language-sh">mouseUpAt(<span class="hljs-string">"elementSelector"</span>, <span class="hljs-string">"coords"</span>);
+<pre><code class="has-line-data" data-line-start="375" data-line-end="377" class="language-sh">mouseUpAt(<span class="hljs-string">"elementSelector"</span>, <span class="hljs-string">"coords"</span>);
 </code></pre>
 <ul>
-<li class="has-line-data" data-line-start="336" data-line-end="337"><strong>open</strong></li>
+<li class="has-line-data" data-line-start="379" data-line-end="380"><strong>open</strong></li>
 </ul>
-<p class="has-line-data" data-line-start="339" data-line-end="340">The “Open” command opens the URL in the current selected browser tab. The open command takes a full URL as input (recommended) or a path relative to the baseurl (outdated).</p>
+<p class="has-line-data" data-line-start="382" data-line-end="383">The “Open” command opens the URL in the current selected browser tab. The open command takes a full URL as input (recommended) or a path relative to the baseurl (outdated).</p>
 <blockquote>
-<p class="has-line-data" data-line-start="341" data-line-end="342">Syntax</p>
+<p class="has-line-data" data-line-start="384" data-line-end="385">Syntax</p>
 </blockquote>
-<pre><code class="has-line-data" data-line-start="343" data-line-end="345" class="language-bsh">open(&quot;URL&quot;);
+<pre><code class="has-line-data" data-line-start="386" data-line-end="388" class="language-bsh">open(&quot;URL&quot;);
 </code></pre>
 <ul>
-<li class="has-line-data" data-line-start="345" data-line-end="346"><strong>pause</strong></li>
+<li class="has-line-data" data-line-start="388" data-line-end="389"><strong>pause</strong></li>
 </ul>
-<p class="has-line-data" data-line-start="348" data-line-end="349">It will hold/wait the test execution for specified time.</p>
+<p class="has-line-data" data-line-start="391" data-line-end="392">It will hold/wait the test execution for specified time.</p>
 <blockquote>
-<p class="has-line-data" data-line-start="350" data-line-end="351">Syntax</p>
+<p class="has-line-data" data-line-start="393" data-line-end="394">Syntax</p>
 </blockquote>
-<pre><code class="has-line-data" data-line-start="352" data-line-end="354" class="language-sh">pause(<span class="hljs-string">"Wait time in milliseconds"</span>);
+<pre><code class="has-line-data" data-line-start="395" data-line-end="397" class="language-sh">pause(<span class="hljs-string">"Wait time in milliseconds"</span>);
 </code></pre>
 <ul>
-<li class="has-line-data" data-line-start="354" data-line-end="355"><strong>runScript</strong></li>
+<li class="has-line-data" data-line-start="397" data-line-end="398"><strong>runScript</strong></li>
 </ul>
-<p class="has-line-data" data-line-start="357" data-line-end="358">The “runScript” command is used to execute a Javascript code. It creates a new script tag in the current test window and adds the specified text into the body of the command.</p>
+<p class="has-line-data" data-line-start="400" data-line-end="401">The “runScript” command is used to execute a Javascript code. It creates a new script tag in the current test window and adds the specified text into the body of the command.</p>
 <blockquote>
-<p class="has-line-data" data-line-start="359" data-line-end="360">Syntax</p>
+<p class="has-line-data" data-line-start="402" data-line-end="403">Syntax</p>
 </blockquote>
-<pre><code class="has-line-data" data-line-start="361" data-line-end="363" class="language-sh">runScript(<span class="hljs-string">"elementSelector"</span>);
+<pre><code class="has-line-data" data-line-start="404" data-line-end="406" class="language-sh">runScript(<span class="hljs-string">"elementSelector"</span>);
 </code></pre>
 <ul>
-<li class="has-line-data" data-line-start="363" data-line-end="364"><strong>removeSelection</strong></li>
+<li class="has-line-data" data-line-start="406" data-line-end="407"><strong>removeSelection</strong></li>
 </ul>
-<p class="has-line-data" data-line-start="366" data-line-end="367">It helps to remove a selection from the set of selected options in a multi-select element using a value/locator</p>
+<p class="has-line-data" data-line-start="409" data-line-end="410">It helps to remove a selection from the set of selected options in a multi-select element using a value/locator</p>
 <blockquote>
-<p class="has-line-data" data-line-start="367" data-line-end="368">Syntax</p>
+<p class="has-line-data" data-line-start="410" data-line-end="411">Syntax</p>
 </blockquote>
-<pre><code class="has-line-data" data-line-start="369" data-line-end="371" class="language-sh">removeSelection(<span class="hljs-string">"elementSelector"</span>, <span class="hljs-string">"value"</span>);
+<pre><code class="has-line-data" data-line-start="412" data-line-end="414" class="language-sh">removeSelection(<span class="hljs-string">"elementSelector"</span>, <span class="hljs-string">"value"</span>);
 </code></pre>
 <ul>
-<li class="has-line-data" data-line-start="371" data-line-end="373"><strong>select</strong></li>
+<li class="has-line-data" data-line-start="414" data-line-end="416"><strong>select</strong></li>
 </ul>
-<p class="has-line-data" data-line-start="373" data-line-end="374">It selects an element from the drop-down menu using any of the elementSelector. If elementSelector is not provided, a match can be attempted using the label/Text of the element.</p>
+<p class="has-line-data" data-line-start="416" data-line-end="417">It selects an element from the drop-down menu using any of the elementSelector. If elementSelector is not provided, a match can be attempted using the label/Text of the element.</p>
 <blockquote>
-<p class="has-line-data" data-line-start="374" data-line-end="375">Syntax</p>
+<p class="has-line-data" data-line-start="417" data-line-end="418">Syntax</p>
 </blockquote>
-<pre><code class="has-line-data" data-line-start="376" data-line-end="378" class="language-sh">select(<span class="hljs-string">"elementSelector"</span>, <span class="hljs-string">"Text"</span>);
+<pre><code class="has-line-data" data-line-start="419" data-line-end="421" class="language-sh">select(<span class="hljs-string">"elementSelector"</span>, <span class="hljs-string">"Text"</span>);
 </code></pre>
 <ul>
-<li class="has-line-data" data-line-start="379" data-line-end="381"><strong>selectFrame</strong></li>
+<li class="has-line-data" data-line-start="422" data-line-end="424"><strong>selectFrame</strong></li>
 </ul>
-<p class="has-line-data" data-line-start="381" data-line-end="382">Selects a frame within the current window. You can select a frame by its 0-based index number (e.g., select the first frame with “index=0”, or the third frame with “index=2”). For nested frames you will need to invoke this command multiple times (once for each frame in the tree until you reach your desired frame). You can select the parent frame with “relative=parent”. To return to the top of the page use “relative=top”.</p>
+<p class="has-line-data" data-line-start="424" data-line-end="425">Selects a frame within the current window. You can select a frame by its 0-based index number (e.g., select the first frame with “index=0”, or the third frame with “index=2”). For nested frames you will need to invoke this command multiple times (once for each frame in the tree until you reach your desired frame). You can select the parent frame with “relative=parent”. To return to the top of the page use “relative=top”.</p>
 <blockquote>
-<p class="has-line-data" data-line-start="382" data-line-end="383">Syntax</p>
+<p class="has-line-data" data-line-start="425" data-line-end="426">Syntax</p>
 </blockquote>
-<pre><code class="has-line-data" data-line-start="384" data-line-end="386" class="language-sh">selectFrame(<span class="hljs-string">"elementSelector"</span>);
+<pre><code class="has-line-data" data-line-start="427" data-line-end="429" class="language-sh">selectFrame(<span class="hljs-string">"elementSelector"</span>);
 </code></pre>
 <ul>
-<li class="has-line-data" data-line-start="387" data-line-end="388"><strong>sendKeys</strong></li>
+<li class="has-line-data" data-line-start="430" data-line-end="432"><strong>selectWindow</strong></li>
 </ul>
-<p class="has-line-data" data-line-start="390" data-line-end="391">The sendKeys command simulates keystroke events on the specified element, as though you typed the value key-by-key.Sendkeys can send the ${KEY_ENTER} key event. This means it will kind of work same as user pressing ENTER using the keyboard.</p>
+<p class="has-line-data" data-line-start="432" data-line-end="433">It selects a popup window using window locator and later on the required actions will be done on the selected window.</p>
 <blockquote>
-<p class="has-line-data" data-line-start="392" data-line-end="393">Syntax</p>
+<p class="has-line-data" data-line-start="433" data-line-end="434">Syntax</p>
 </blockquote>
-<pre><code class="has-line-data" data-line-start="394" data-line-end="396" class="language-sh">sendKeys(<span class="hljs-string">"elementSelector"</span>, <span class="hljs-variable">${KEY_ENTER}</span>);
+<pre><code class="has-line-data" data-line-start="435" data-line-end="437" class="language-sh">selectWindow(<span class="hljs-string">"elementSelector"</span>);
 </code></pre>
 <ul>
-<li class="has-line-data" data-line-start="396" data-line-end="397"><strong>setWindowSize</strong></li>
+<li class="has-line-data" data-line-start="438" data-line-end="439"><strong>sendKeys</strong></li>
 </ul>
-<p class="has-line-data" data-line-start="399" data-line-end="400">The “setWindowSize” will set the size of the browser’s window.</p>
+<p class="has-line-data" data-line-start="441" data-line-end="442">The sendKeys command simulates keystroke events on the specified element, as though you typed the value key-by-key.Sendkeys can send the ${KEY_ENTER} key event. This means it will kind of work same as user pressing ENTER using the keyboard.</p>
 <blockquote>
-<p class="has-line-data" data-line-start="400" data-line-end="401">Syntax</p>
+<p class="has-line-data" data-line-start="443" data-line-end="444">Syntax</p>
 </blockquote>
-<pre><code class="has-line-data" data-line-start="402" data-line-end="404" class="language-sh"><span class="hljs-built_in">set</span>WindowSize(<span class="hljs-string">"width X height"</span>);
+<pre><code class="has-line-data" data-line-start="445" data-line-end="447" class="language-sh">sendKeys(<span class="hljs-string">"elementSelector"</span>, <span class="hljs-variable">${KEY_ENTER}</span>);
 </code></pre>
 <ul>
-<li class="has-line-data" data-line-start="404" data-line-end="405"><strong>storeText</strong></li>
+<li class="has-line-data" data-line-start="447" data-line-end="448"><strong>setWindowSize</strong></li>
 </ul>
-<p class="has-line-data" data-line-start="407" data-line-end="408">The “storeText” command is used to store the text value of an element in a variable of the web page for the later use.</p>
-<blockquote>
-<p class="has-line-data" data-line-start="409" data-line-end="410">Syntax</p>
-</blockquote>
-<pre><code class="has-line-data" data-line-start="411" data-line-end="413" class="language-sh">storeText(<span class="hljs-string">"elementSelector"</span>,<span class="hljs-string">"value"</span>);
-</code></pre>
-<ul>
-<li class="has-line-data" data-line-start="415" data-line-end="416"><strong>store</strong></li>
-</ul>
-<p class="has-line-data" data-line-start="418" data-line-end="419">The “store” command is used to store some data for later use.</p>
-<blockquote>
-<p class="has-line-data" data-line-start="420" data-line-end="421">Syntax</p>
-</blockquote>
-<pre><code class="has-line-data" data-line-start="422" data-line-end="424" class="language-sh">store(<span class="hljs-string">"elementSelector"</span>, <span class="hljs-string">"variable name"</span>);
-</code></pre>
-<ul>
-<li class="has-line-data" data-line-start="426" data-line-end="427"><strong>storeValue</strong></li>
-</ul>
-<p class="has-line-data" data-line-start="429" data-line-end="430">The “storevalue” command is used to get the value of an element and is stored in a variable for later use.</p>
-<blockquote>
-<p class="has-line-data" data-line-start="431" data-line-end="432">Syntax</p>
-</blockquote>
-<pre><code class="has-line-data" data-line-start="433" data-line-end="435" class="language-sh">storeValue(<span class="hljs-string">"elementSelector"</span>, <span class="hljs-string">"variable name"</span>);
-</code></pre>
-<ul>
-<li class="has-line-data" data-line-start="437" data-line-end="438"><strong>storeTitle</strong></li>
-</ul>
-<p class="has-line-data" data-line-start="440" data-line-end="441">The “storeTitle” command gets the title of the current page.</p>
-<blockquote>
-<p class="has-line-data" data-line-start="442" data-line-end="443">Syntax</p>
-</blockquote>
-<pre><code class="has-line-data" data-line-start="444" data-line-end="446" class="language-sh">storeTitle(<span class="hljs-string">"elementSelector"</span>, <span class="hljs-string">"variable name"</span>);
-</code></pre>
-<ul>
-<li class="has-line-data" data-line-start="447" data-line-end="448"><strong>storeAttribute</strong></li>
-</ul>
-<p class="has-line-data" data-line-start="450" data-line-end="451">“storeAttribute” will get the value of an element attribute. The attribute value may differ depending on the browser.</p>
+<p class="has-line-data" data-line-start="450" data-line-end="451">The “setWindowSize” will set the size of the browser’s window.</p>
 <blockquote>
 <p class="has-line-data" data-line-start="451" data-line-end="452">Syntax</p>
 </blockquote>
-<pre><code class="has-line-data" data-line-start="453" data-line-end="455" class="language-sh">storeAttribute(<span class="hljs-string">"elementSelector"</span>, <span class="hljs-string">"variable name"</span>);
+<pre><code class="has-line-data" data-line-start="453" data-line-end="455" class="language-sh"><span class="hljs-built_in">set</span>WindowSize(<span class="hljs-string">"width X height"</span>);
 </code></pre>
 <ul>
-<li class="has-line-data" data-line-start="455" data-line-end="456"><strong>type</strong></li>
+<li class="has-line-data" data-line-start="455" data-line-end="456"><strong>storeText</strong></li>
 </ul>
-<p class="has-line-data" data-line-start="458" data-line-end="459">“type” command is one of the commands, mainly used to type text into the text box and text area fields.</p>
+<p class="has-line-data" data-line-start="458" data-line-end="459">The “storeText” command is used to store the text value of an element in a variable of the web page for the later use.</p>
 <blockquote>
-<p class="has-line-data" data-line-start="459" data-line-end="460">Syntax</p>
+<p class="has-line-data" data-line-start="460" data-line-end="461">Syntax</p>
 </blockquote>
-<pre><code class="has-line-data" data-line-start="461" data-line-end="463" class="language-sh"><span class="hljs-built_in">type</span>(<span class="hljs-string">"elementSelector"</span>, <span class="hljs-string">"value to input"</span>);
+<pre><code class="has-line-data" data-line-start="462" data-line-end="464" class="language-sh">storeText(<span class="hljs-string">"elementSelector"</span>,<span class="hljs-string">"value"</span>);
 </code></pre>
 <ul>
-<li class="has-line-data" data-line-start="463" data-line-end="464"><strong>uncheck</strong></li>
+<li class="has-line-data" data-line-start="466" data-line-end="467"><strong>store</strong></li>
 </ul>
-<p class="has-line-data" data-line-start="466" data-line-end="467">The “uncheck” command , unchecks on the checkbox or a radio button. It does the similar action of clicking a button or checkbox in a webpage for unchecking the element.</p>
+<p class="has-line-data" data-line-start="469" data-line-end="470">The “store” command is used to store some data for later use.</p>
 <blockquote>
-<p class="has-line-data" data-line-start="468" data-line-end="469">Syntax</p>
+<p class="has-line-data" data-line-start="471" data-line-end="472">Syntax</p>
 </blockquote>
-<pre><code class="has-line-data" data-line-start="470" data-line-end="472" class="language-sh">uncheck(<span class="hljs-string">"elementSelector"</span>);
+<pre><code class="has-line-data" data-line-start="473" data-line-end="475" class="language-sh">store(<span class="hljs-string">"elementSelector"</span>, <span class="hljs-string">"variable name"</span>);
 </code></pre>
 <ul>
-<li class="has-line-data" data-line-start="473" data-line-end="475"><strong>verify</strong></li>
+<li class="has-line-data" data-line-start="477" data-line-end="478"><strong>storeValue</strong></li>
 </ul>
-<p class="has-line-data" data-line-start="475" data-line-end="476">It just verifies a variable is an expected value. The variable’s value will be converted to a string for comparison. The test will continue even if the verify fails.</p>
+<p class="has-line-data" data-line-start="480" data-line-end="481">The “storevalue” command is used to get the value of an element and is stored in a variable for later use.</p>
 <blockquote>
-<p class="has-line-data" data-line-start="476" data-line-end="477">Syntax</p>
+<p class="has-line-data" data-line-start="482" data-line-end="483">Syntax</p>
 </blockquote>
-<pre><code class="has-line-data" data-line-start="478" data-line-end="480" class="language-sh">verify(<span class="hljs-string">"elementSelector"</span>, <span class="hljs-string">"value"</span>);
+<pre><code class="has-line-data" data-line-start="484" data-line-end="486" class="language-sh">storeValue(<span class="hljs-string">"elementSelector"</span>, <span class="hljs-string">"variable name"</span>);
 </code></pre>
 <ul>
-<li class="has-line-data" data-line-start="480" data-line-end="481"><strong>verifyChecked</strong></li>
+<li class="has-line-data" data-line-start="488" data-line-end="489"><strong>storeTitle</strong></li>
 </ul>
-<p class="has-line-data" data-line-start="483" data-line-end="484">It just verifies whether, a radio button/check box is checked. The test execution continues even if the verify fails.</p>
+<p class="has-line-data" data-line-start="491" data-line-end="492">The “storeTitle” command gets the title of the current page.</p>
 <blockquote>
-<p class="has-line-data" data-line-start="484" data-line-end="485">Syntax</p>
+<p class="has-line-data" data-line-start="493" data-line-end="494">Syntax</p>
 </blockquote>
-<pre><code class="has-line-data" data-line-start="486" data-line-end="488" class="language-sh">verifyChecked(<span class="hljs-string">"elementSelector"</span>);
+<pre><code class="has-line-data" data-line-start="495" data-line-end="497" class="language-sh">storeTitle(<span class="hljs-string">"elementSelector"</span>, <span class="hljs-string">"variable name"</span>);
 </code></pre>
 <ul>
-<li class="has-line-data" data-line-start="488" data-line-end="489"><strong>verifyEditable</strong></li>
+<li class="has-line-data" data-line-start="498" data-line-end="499"><strong>storeAttribute</strong></li>
 </ul>
-<p class="has-line-data" data-line-start="491" data-line-end="492">It just verifies, if the specified input(text/value) is editable. The test execution continues even if the verify fails.</p>
+<p class="has-line-data" data-line-start="501" data-line-end="502">“storeAttribute” will get the value of an element attribute. The attribute value may differ depending on the browser.</p>
 <blockquote>
-<p class="has-line-data" data-line-start="492" data-line-end="493">Syntax</p>
+<p class="has-line-data" data-line-start="502" data-line-end="503">Syntax</p>
 </blockquote>
-<pre><code class="has-line-data" data-line-start="494" data-line-end="496" class="language-sh">verifyEditable(<span class="hljs-string">"elementSelector"</span>);
+<pre><code class="has-line-data" data-line-start="504" data-line-end="506" class="language-sh">storeAttribute(<span class="hljs-string">"elementSelector"</span>, <span class="hljs-string">"variable name"</span>);
 </code></pre>
 <ul>
-<li class="has-line-data" data-line-start="496" data-line-end="497"><strong>verifyElementPresent</strong></li>
+<li class="has-line-data" data-line-start="507" data-line-end="509"><strong>storeWindowHandle</strong></li>
 </ul>
-<p class="has-line-data" data-line-start="499" data-line-end="500">It will just verify, if the element is present in the page. The test excution continues even if the verify fails.</p>
+<p class="has-line-data" data-line-start="509" data-line-end="510">It gets the handle of the window/tab of the current page.</p>
 <blockquote>
-<p class="has-line-data" data-line-start="500" data-line-end="501">Syntax</p>
+<p class="has-line-data" data-line-start="511" data-line-end="512">Syntax</p>
 </blockquote>
-<pre><code class="has-line-data" data-line-start="502" data-line-end="504" class="language-sh">verifyElementPresent(<span class="hljs-string">"elementSelector"</span>);
+<pre><code class="has-line-data" data-line-start="513" data-line-end="515" class="language-sh">storeWindowHandle(<span class="hljs-string">"elementSelector"</span>);
 </code></pre>
 <ul>
-<li class="has-line-data" data-line-start="504" data-line-end="505"><strong>verifyElementNotPresent</strong></li>
+<li class="has-line-data" data-line-start="516" data-line-end="517"><strong>type</strong></li>
 </ul>
-<p class="has-line-data" data-line-start="507" data-line-end="508">It will just verify, if the element is not present in the page. The test execution continues even the verify fails.</p>
+<p class="has-line-data" data-line-start="519" data-line-end="520">“type” command is one of the commands, mainly used to type text into the text box and text area fields.</p>
 <blockquote>
-<p class="has-line-data" data-line-start="508" data-line-end="509">Syntax</p>
+<p class="has-line-data" data-line-start="520" data-line-end="521">Syntax</p>
 </blockquote>
-<pre><code class="has-line-data" data-line-start="510" data-line-end="512" class="language-sh">verifyElementNotPresent(<span class="hljs-string">"elementSelector"</span>);
+<pre><code class="has-line-data" data-line-start="522" data-line-end="524" class="language-sh"><span class="hljs-built_in">type</span>(<span class="hljs-string">"elementSelector"</span>, <span class="hljs-string">"value to input"</span>);
 </code></pre>
 <ul>
-<li class="has-line-data" data-line-start="513" data-line-end="515"><strong>verifyNotSelectedValue</strong></li>
+<li class="has-line-data" data-line-start="524" data-line-end="525"><strong>uncheck</strong></li>
 </ul>
-<p class="has-line-data" data-line-start="515" data-line-end="516">It just verifies, whether the expected value is not selected from the drop down list. The test will continue even if verify fails.</p>
+<p class="has-line-data" data-line-start="527" data-line-end="528">The “uncheck” command , unchecks on the checkbox or a radio button. It does the similar action of clicking a button or checkbox in a webpage for unchecking the element.</p>
 <blockquote>
-<p class="has-line-data" data-line-start="516" data-line-end="517">Syntax</p>
+<p class="has-line-data" data-line-start="529" data-line-end="530">Syntax</p>
 </blockquote>
-<pre><code class="has-line-data" data-line-start="518" data-line-end="520" class="language-sh">verifyNotSelectedValue(<span class="hljs-string">"elementSelector"</span>, <span class="hljs-string">"value"</span>);
+<pre><code class="has-line-data" data-line-start="531" data-line-end="533" class="language-sh">uncheck(<span class="hljs-string">"elementSelector"</span>);
 </code></pre>
 <ul>
-<li class="has-line-data" data-line-start="521" data-line-end="522"><strong>verifyNotChecked</strong></li>
+<li class="has-line-data" data-line-start="534" data-line-end="536"><strong>verify</strong></li>
 </ul>
-<p class="has-line-data" data-line-start="524" data-line-end="525">It just verifies whether, a radio button/checkbox is not checked. The test execution continues even if the verify fails.</p>
+<p class="has-line-data" data-line-start="536" data-line-end="537">It just verifies a variable is an expected value. The variable’s value will be converted to a string for comparison. The test will continue even if the verify fails.</p>
 <blockquote>
-<p class="has-line-data" data-line-start="525" data-line-end="526">Syntax</p>
+<p class="has-line-data" data-line-start="537" data-line-end="538">Syntax</p>
 </blockquote>
-<pre><code class="has-line-data" data-line-start="527" data-line-end="529" class="language-sh">verifyNotChecked(<span class="hljs-string">"elementSelector"</span>);
+<pre><code class="has-line-data" data-line-start="539" data-line-end="541" class="language-sh">verify(<span class="hljs-string">"elementSelector"</span>, <span class="hljs-string">"value"</span>);
 </code></pre>
 <ul>
-<li class="has-line-data" data-line-start="529" data-line-end="530"><strong>verifyNotEditable</strong></li>
+<li class="has-line-data" data-line-start="541" data-line-end="542"><strong>verifyChecked</strong></li>
 </ul>
-<p class="has-line-data" data-line-start="532" data-line-end="533">It just verifies, if the specified input(text/value) is not editable. The test execution continues even if the verify fails.</p>
+<p class="has-line-data" data-line-start="544" data-line-end="545">It just verifies whether, a radio button/check box is checked. The test execution continues even if the verify fails.</p>
 <blockquote>
-<p class="has-line-data" data-line-start="533" data-line-end="534">Syntax</p>
+<p class="has-line-data" data-line-start="545" data-line-end="546">Syntax</p>
 </blockquote>
-<pre><code class="has-line-data" data-line-start="535" data-line-end="537" class="language-sh">verifyNotEditable(<span class="hljs-string">"elementSelector"</span>);
+<pre><code class="has-line-data" data-line-start="547" data-line-end="549" class="language-sh">verifyChecked(<span class="hljs-string">"elementSelector"</span>);
 </code></pre>
 <ul>
-<li class="has-line-data" data-line-start="537" data-line-end="538"><strong>verifyNotText</strong></li>
+<li class="has-line-data" data-line-start="549" data-line-end="550"><strong>verifyEditable</strong></li>
 </ul>
-<p class="has-line-data" data-line-start="540" data-line-end="541">It just verifies, if the text of an element is present. The test execution continues even if the verify fails.</p>
+<p class="has-line-data" data-line-start="552" data-line-end="553">It just verifies, if the specified input(text/value) is editable. The test execution continues even if the verify fails.</p>
 <blockquote>
-<p class="has-line-data" data-line-start="541" data-line-end="542">Syntax</p>
+<p class="has-line-data" data-line-start="553" data-line-end="554">Syntax</p>
 </blockquote>
-<pre><code class="has-line-data" data-line-start="543" data-line-end="545" class="language-sh">verifyNotText(<span class="hljs-string">"text/Value"</span>);
+<pre><code class="has-line-data" data-line-start="555" data-line-end="557" class="language-sh">verifyEditable(<span class="hljs-string">"elementSelector"</span>);
 </code></pre>
 <ul>
-<li class="has-line-data" data-line-start="546" data-line-end="548"><strong>verifySelectedLabel</strong></li>
+<li class="has-line-data" data-line-start="557" data-line-end="558"><strong>verifyElementPresent</strong></li>
 </ul>
-<p class="has-line-data" data-line-start="548" data-line-end="549">It just verifies, whether the label of a selected element in a drop-down menu, matches the provided value/text. The test continues even if the verify fails.</p>
+<p class="has-line-data" data-line-start="560" data-line-end="561">It will just verify, if the element is present in the page. The test excution continues even if the verify fails.</p>
 <blockquote>
-<p class="has-line-data" data-line-start="549" data-line-end="550">Syntax</p>
+<p class="has-line-data" data-line-start="561" data-line-end="562">Syntax</p>
 </blockquote>
-<pre><code class="has-line-data" data-line-start="551" data-line-end="553" class="language-sh">verifySelectedLabel(<span class="hljs-string">"elementSelector"</span>, <span class="hljs-string">"Text"</span>);
+<pre><code class="has-line-data" data-line-start="563" data-line-end="565" class="language-sh">verifyElementPresent(<span class="hljs-string">"elementSelector"</span>);
 </code></pre>
 <ul>
-<li class="has-line-data" data-line-start="554" data-line-end="556"><strong>verifySelectedValue</strong></li>
+<li class="has-line-data" data-line-start="565" data-line-end="566"><strong>verifyElementNotPresent</strong></li>
 </ul>
-<p class="has-line-data" data-line-start="556" data-line-end="557">It just verifies, whether the expected element has been chosen in a select menu by its value. The test will continue even if the verify fails.</p>
+<p class="has-line-data" data-line-start="568" data-line-end="569">It will just verify, if the element is not present in the page. The test execution continues even the verify fails.</p>
 <blockquote>
-<p class="has-line-data" data-line-start="557" data-line-end="558">Syntax</p>
+<p class="has-line-data" data-line-start="569" data-line-end="570">Syntax</p>
 </blockquote>
-<pre><code class="has-line-data" data-line-start="559" data-line-end="561" class="language-sh">verifySelectedValue(<span class="hljs-string">"elementSelector"</span>, <span class="hljs-string">"value"</span>);
+<pre><code class="has-line-data" data-line-start="571" data-line-end="573" class="language-sh">verifyElementNotPresent(<span class="hljs-string">"elementSelector"</span>);
 </code></pre>
 <ul>
-<li class="has-line-data" data-line-start="562" data-line-end="564"><strong>verifyText</strong></li>
+<li class="has-line-data" data-line-start="574" data-line-end="576"><strong>verifyNotSelectedValue</strong></li>
 </ul>
-<p class="has-line-data" data-line-start="564" data-line-end="565">It just verifies, whether the text provided matches the text of an element in the page. The test continues even if verify fails.</p>
+<p class="has-line-data" data-line-start="576" data-line-end="577">It just verifies, whether the expected value is not selected from the drop down list. The test will continue even if verify fails.</p>
 <blockquote>
-<p class="has-line-data" data-line-start="566" data-line-end="567">Syntax</p>
+<p class="has-line-data" data-line-start="577" data-line-end="578">Syntax</p>
 </blockquote>
-<pre><code class="has-line-data" data-line-start="568" data-line-end="570" class="language-sh">verifyText(<span class="hljs-string">"elementSelector"</span>,<span class="hljs-string">"text"</span>);
+<pre><code class="has-line-data" data-line-start="579" data-line-end="581" class="language-sh">verifyNotSelectedValue(<span class="hljs-string">"elementSelector"</span>, <span class="hljs-string">"value"</span>);
 </code></pre>
 <ul>
-<li class="has-line-data" data-line-start="571" data-line-end="572"><strong>verifyTitle</strong></li>
+<li class="has-line-data" data-line-start="582" data-line-end="583"><strong>verifyNotChecked</strong></li>
 </ul>
-<p class="has-line-data" data-line-start="574" data-line-end="575">It will just verify whether the title of the current page matches with the provided text. The test execution will continue even if the verify fails.</p>
+<p class="has-line-data" data-line-start="585" data-line-end="586">It just verifies whether, a radio button/checkbox is not checked. The test execution continues even if the verify fails.</p>
 <blockquote>
-<p class="has-line-data" data-line-start="575" data-line-end="576">Syntax</p>
+<p class="has-line-data" data-line-start="586" data-line-end="587">Syntax</p>
 </blockquote>
-<pre><code class="has-line-data" data-line-start="577" data-line-end="579" class="language-sh">verifyTitle(<span class="hljs-string">"text"</span>);
+<pre><code class="has-line-data" data-line-start="588" data-line-end="590" class="language-sh">verifyNotChecked(<span class="hljs-string">"elementSelector"</span>);
 </code></pre>
 <ul>
-<li class="has-line-data" data-line-start="579" data-line-end="581"><strong>verifyValue</strong></li>
+<li class="has-line-data" data-line-start="590" data-line-end="591"><strong>verifyNotEditable</strong></li>
 </ul>
-<p class="has-line-data" data-line-start="581" data-line-end="582">It will just verify the value of an input field.For checkbox/radio elements, the value will be “on” or “off” depending on whether the element is checked or not. The test will continue even if the verify fails.</p>
+<p class="has-line-data" data-line-start="593" data-line-end="594">It just verifies, if the specified input(text/value) is not editable. The test execution continues even if the verify fails.</p>
 <blockquote>
-<p class="has-line-data" data-line-start="583" data-line-end="584">Syntax</p>
+<p class="has-line-data" data-line-start="594" data-line-end="595">Syntax</p>
 </blockquote>
-<pre><code class="has-line-data" data-line-start="585" data-line-end="587" class="language-sh">verifyValue(<span class="hljs-string">"elementSelector"</span>,<span class="hljs-string">"value"</span>);
+<pre><code class="has-line-data" data-line-start="596" data-line-end="598" class="language-sh">verifyNotEditable(<span class="hljs-string">"elementSelector"</span>);
 </code></pre>
 <ul>
-<li class="has-line-data" data-line-start="588" data-line-end="589"><strong>waitForElementEditable</strong></li>
+<li class="has-line-data" data-line-start="598" data-line-end="599"><strong>verifyNotText</strong></li>
 </ul>
-<p class="has-line-data" data-line-start="591" data-line-end="592">It will wait for some time for the value/text of an element to be editable.</p>
+<p class="has-line-data" data-line-start="601" data-line-end="602">It just verifies, if the text of an element is present. The test execution continues even if the verify fails.</p>
 <blockquote>
-<p class="has-line-data" data-line-start="592" data-line-end="593">Syntax</p>
+<p class="has-line-data" data-line-start="602" data-line-end="603">Syntax</p>
 </blockquote>
-<pre><code class="has-line-data" data-line-start="594" data-line-end="596" class="language-sh"><span class="hljs-built_in">wait</span>ForElementEditable(<span class="hljs-string">"elementSelector"</span>,<span class="hljs-string">"wait time in ms"</span>);
+<pre><code class="has-line-data" data-line-start="604" data-line-end="606" class="language-sh">verifyNotText(<span class="hljs-string">"text/Value"</span>);
 </code></pre>
 <ul>
-<li class="has-line-data" data-line-start="597" data-line-end="598"><strong>waitForElementPresent</strong></li>
+<li class="has-line-data" data-line-start="607" data-line-end="609"><strong>verifySelectedLabel</strong></li>
 </ul>
-<p class="has-line-data" data-line-start="600" data-line-end="601">It will wait some time for the target element to be present in the page.</p>
-<blockquote>
-<p class="has-line-data" data-line-start="601" data-line-end="602">Syntax</p>
-</blockquote>
-<pre><code class="has-line-data" data-line-start="603" data-line-end="605" class="language-sh"><span class="hljs-built_in">wait</span>ForElementPresent(<span class="hljs-string">"elementSelector"</span>, <span class="hljs-string">"wait time in ms"</span>);
-</code></pre>
-<ul>
-<li class="has-line-data" data-line-start="606" data-line-end="607"><strong>waitForElementNotPresent</strong></li>
-</ul>
-<p class="has-line-data" data-line-start="609" data-line-end="610">It will wait some time for the target element not to be present in the page.</p>
+<p class="has-line-data" data-line-start="609" data-line-end="610">It just verifies, whether the label of a selected element in a drop-down menu, matches the provided value/text. The test continues even if the verify fails.</p>
 <blockquote>
 <p class="has-line-data" data-line-start="610" data-line-end="611">Syntax</p>
 </blockquote>
-<pre><code class="has-line-data" data-line-start="612" data-line-end="614" class="language-sh"><span class="hljs-built_in">wait</span>ForElementNotPresent(<span class="hljs-string">"elementSelector"</span>, <span class="hljs-string">"wait time in ms"</span>);
+<pre><code class="has-line-data" data-line-start="612" data-line-end="614" class="language-sh">verifySelectedLabel(<span class="hljs-string">"elementSelector"</span>, <span class="hljs-string">"Text"</span>);
 </code></pre>
 <ul>
-<li class="has-line-data" data-line-start="615" data-line-end="616"><strong>waitForElementVisible</strong></li>
+<li class="has-line-data" data-line-start="615" data-line-end="617"><strong>verifySelectedValue</strong></li>
 </ul>
-<p class="has-line-data" data-line-start="618" data-line-end="619">It will wait some time for the target element to be visible in the page.</p>
+<p class="has-line-data" data-line-start="617" data-line-end="618">It just verifies, whether the expected element has been chosen in a select menu by its value. The test will continue even if the verify fails.</p>
 <blockquote>
-<p class="has-line-data" data-line-start="619" data-line-end="620">Syntax</p>
+<p class="has-line-data" data-line-start="618" data-line-end="619">Syntax</p>
 </blockquote>
-<pre><code class="has-line-data" data-line-start="621" data-line-end="623" class="language-sh"><span class="hljs-built_in">wait</span>ForElementVisible(<span class="hljs-string">"elementSelector"</span>, <span class="hljs-string">"wait time in ms"</span>);
+<pre><code class="has-line-data" data-line-start="620" data-line-end="622" class="language-sh">verifySelectedValue(<span class="hljs-string">"elementSelector"</span>, <span class="hljs-string">"value"</span>);
 </code></pre>
 <ul>
-<li class="has-line-data" data-line-start="623" data-line-end="625"><strong>waitForElementNotEditable</strong></li>
+<li class="has-line-data" data-line-start="623" data-line-end="625"><strong>verifyText</strong></li>
 </ul>
-<p class="has-line-data" data-line-start="625" data-line-end="626">It will wait for an element not to be editable.</p>
+<p class="has-line-data" data-line-start="625" data-line-end="626">It just verifies, whether the text provided matches the text of an element in the page. The test continues even if verify fails.</p>
 <blockquote>
-<p class="has-line-data" data-line-start="626" data-line-end="627">Syntax</p>
+<p class="has-line-data" data-line-start="627" data-line-end="628">Syntax</p>
 </blockquote>
-<pre><code class="has-line-data" data-line-start="628" data-line-end="630" class="language-sh"><span class="hljs-built_in">wait</span>ForElementNotEditable(<span class="hljs-string">"elementSelector"</span>, <span class="hljs-string">"wait time in ms"</span>);
+<pre><code class="has-line-data" data-line-start="629" data-line-end="631" class="language-sh">verifyText(<span class="hljs-string">"elementSelector"</span>,<span class="hljs-string">"text"</span>);
 </code></pre>
 <ul>
-<li class="has-line-data" data-line-start="631" data-line-end="632"><strong>waitForElementNotVisible</strong></li>
+<li class="has-line-data" data-line-start="632" data-line-end="633"><strong>verifyTitle</strong></li>
 </ul>
-<p class="has-line-data" data-line-start="634" data-line-end="635">It will wait some time for the target element not to be visible in the page.</p>
+<p class="has-line-data" data-line-start="635" data-line-end="636">It will just verify whether the title of the current page matches with the provided text. The test execution will continue even if the verify fails.</p>
 <blockquote>
-<p class="has-line-data" data-line-start="635" data-line-end="636">Syntax</p>
+<p class="has-line-data" data-line-start="636" data-line-end="637">Syntax</p>
 </blockquote>
-<pre><code class="has-line-data" data-line-start="637" data-line-end="639" class="language-sh"><span class="hljs-built_in">wait</span>ForElementNotVisible(<span class="hljs-string">"elementSelector"</span>,<span class="hljs-string">"wait time in ms"</span>);
+<pre><code class="has-line-data" data-line-start="638" data-line-end="640" class="language-sh">verifyTitle(<span class="hljs-string">"text"</span>);
 </code></pre>
-<h2 class="code-line" data-line-start=659 data-line-end=660><a id="Control_Flow_659"></a>Control Flow</h2>
 <ul>
-<li class="has-line-data" data-line-start="665" data-line-end="667"><strong>if</strong></li>
+<li class="has-line-data" data-line-start="640" data-line-end="642"><strong>verifyValue</strong></li>
 </ul>
-<p class="has-line-data" data-line-start="667" data-line-end="668">The “if” command is the conditional block and terminates with “end”. It evaluates the Javascript expression.</p>
+<p class="has-line-data" data-line-start="642" data-line-end="643">It will just verify the value of an input field.For checkbox/radio elements, the value will be “on” or “off” depending on whether the element is checked or not. The test will continue even if the verify fails.</p>
 <blockquote>
-<p class="has-line-data" data-line-start="668" data-line-end="669">Syntax</p>
+<p class="has-line-data" data-line-start="644" data-line-end="645">Syntax</p>
 </blockquote>
-<pre><code class="has-line-data" data-line-start="670" data-line-end="675" class="language-sh"><span class="hljs-keyword">if</span>(condition)
+<pre><code class="has-line-data" data-line-start="646" data-line-end="648" class="language-sh">verifyValue(<span class="hljs-string">"elementSelector"</span>,<span class="hljs-string">"value"</span>);
+</code></pre>
+<ul>
+<li class="has-line-data" data-line-start="649" data-line-end="650"><strong>waitForElementEditable</strong></li>
+</ul>
+<p class="has-line-data" data-line-start="652" data-line-end="653">It will wait for some time for the value/text of an element to be editable.</p>
+<blockquote>
+<p class="has-line-data" data-line-start="653" data-line-end="654">Syntax</p>
+</blockquote>
+<pre><code class="has-line-data" data-line-start="655" data-line-end="657" class="language-sh"><span class="hljs-built_in">wait</span>ForElementEditable(<span class="hljs-string">"elementSelector"</span>,<span class="hljs-string">"wait time in ms"</span>);
+</code></pre>
+<ul>
+<li class="has-line-data" data-line-start="658" data-line-end="659"><strong>waitForElementPresent</strong></li>
+</ul>
+<p class="has-line-data" data-line-start="661" data-line-end="662">It will wait some time for the target element to be present in the page.</p>
+<blockquote>
+<p class="has-line-data" data-line-start="662" data-line-end="663">Syntax</p>
+</blockquote>
+<pre><code class="has-line-data" data-line-start="664" data-line-end="666" class="language-sh"><span class="hljs-built_in">wait</span>ForElementPresent(<span class="hljs-string">"elementSelector"</span>, <span class="hljs-string">"wait time in ms"</span>);
+</code></pre>
+<ul>
+<li class="has-line-data" data-line-start="667" data-line-end="668"><strong>waitForElementNotPresent</strong></li>
+</ul>
+<p class="has-line-data" data-line-start="670" data-line-end="671">It will wait some time for the target element not to be present in the page.</p>
+<blockquote>
+<p class="has-line-data" data-line-start="671" data-line-end="672">Syntax</p>
+</blockquote>
+<pre><code class="has-line-data" data-line-start="673" data-line-end="675" class="language-sh"><span class="hljs-built_in">wait</span>ForElementNotPresent(<span class="hljs-string">"elementSelector"</span>, <span class="hljs-string">"wait time in ms"</span>);
+</code></pre>
+<ul>
+<li class="has-line-data" data-line-start="676" data-line-end="677"><strong>waitForElementVisible</strong></li>
+</ul>
+<p class="has-line-data" data-line-start="679" data-line-end="680">It will wait some time for the target element to be visible in the page.</p>
+<blockquote>
+<p class="has-line-data" data-line-start="680" data-line-end="681">Syntax</p>
+</blockquote>
+<pre><code class="has-line-data" data-line-start="682" data-line-end="684" class="language-sh"><span class="hljs-built_in">wait</span>ForElementVisible(<span class="hljs-string">"elementSelector"</span>, <span class="hljs-string">"wait time in ms"</span>);
+</code></pre>
+<ul>
+<li class="has-line-data" data-line-start="684" data-line-end="686"><strong>waitForElementNotEditable</strong></li>
+</ul>
+<p class="has-line-data" data-line-start="686" data-line-end="687">It will wait for an element not to be editable.</p>
+<blockquote>
+<p class="has-line-data" data-line-start="687" data-line-end="688">Syntax</p>
+</blockquote>
+<pre><code class="has-line-data" data-line-start="689" data-line-end="691" class="language-sh"><span class="hljs-built_in">wait</span>ForElementNotEditable(<span class="hljs-string">"elementSelector"</span>, <span class="hljs-string">"wait time in ms"</span>);
+</code></pre>
+<ul>
+<li class="has-line-data" data-line-start="692" data-line-end="693"><strong>waitForElementNotVisible</strong></li>
+</ul>
+<p class="has-line-data" data-line-start="695" data-line-end="696">It will wait some time for the target element not to be visible in the page.</p>
+<blockquote>
+<p class="has-line-data" data-line-start="696" data-line-end="697">Syntax</p>
+</blockquote>
+<pre><code class="has-line-data" data-line-start="698" data-line-end="700" class="language-sh"><span class="hljs-built_in">wait</span>ForElementNotVisible(<span class="hljs-string">"elementSelector"</span>,<span class="hljs-string">"wait time in ms"</span>);
+</code></pre>
+<h2 class="code-line" data-line-start=720 data-line-end=721><a id="Control_Flow_720"></a>Control Flow</h2>
+<ul>
+<li class="has-line-data" data-line-start="726" data-line-end="728"><strong>if</strong></li>
+</ul>
+<p class="has-line-data" data-line-start="728" data-line-end="729">The “if” command is the conditional block and terminates with “end”. It evaluates the Javascript expression.</p>
+<blockquote>
+<p class="has-line-data" data-line-start="729" data-line-end="730">Syntax</p>
+</blockquote>
+<pre><code class="has-line-data" data-line-start="731" data-line-end="736" class="language-sh"><span class="hljs-keyword">if</span>(condition)
 {
 statement;
 }
